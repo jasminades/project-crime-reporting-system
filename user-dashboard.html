@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SafeNet Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+
+
+  <style>
+    .dashboard-option {
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .dashboard-content {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .hello-user{
+        color:#fff;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-transform: capitalize;
+    }
+
+    .block-20 {
+      border: 2px solid #333; 
+      border-radius: 8px; 
+      overflow: hidden; 
+    }
+
+    
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+  
+</head>
+<body>
+  
+ <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+   <div class="container">
+     <a class="navbar-brand" href="index.html">safe<span>net</span></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="oi oi-menu"></span> Menu
+     </button>
+
+     <div class="collapse navbar-collapse" id="ftco-nav">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+         <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+         <li class="nav-item "><a href="registration.html" class="nav-link">Register</a></li>
+         <li class="nav-item"><a href="reporting.html" class="nav-link">Report</a></li>
+         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+         <li class="nav-item active"><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+
+ <section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url('imgs/home-wallpaper6.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end">
+        <div class="col-md-9 ftco-animate pb-5 mb-5">
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Dashboard <i class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-3 bread">User Dashboard</h1>
+          <h2 class="hello-user">Welcome <span id="userName"></span></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+
+
+
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-3 d-flex ftco-animate">
+       <div class="blog-entry justify-content-end">
+        <div class="text">
+         <h3 class="heading mb-3"><a href="user-profile-info.html">User Profile Information</a></h3>
+         <a href="user-profile-info.html" class="block-20 img" style="background-image: url('imgs/user-profile-logo.jpg');">
+         </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 d-flex ftco-animate">
+   <div class="blog-entry justify-content-end">
+    <div class="text">
+     <h3 class="heading mb-3"><a href="report-history.html">Report History</a></h3>
+     <a href="report-history.html" class="block-20 img" style="background-image: url('imgs/report-history.jpg');">
+     </a>
+  </div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="reporting.html">Submit a new report</a></h3>
+   <a href="reporting.html" class="block-20 img" style="background-image: url('imgs/submit-newrep-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="notifications.html">Notifications</a></h3>
+   <a href="notifications.html" class="block-20 img" style="background-image: url('imgs/notifications-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="settings.html">User Settings</a></h3>
+   <a href="settings.html" class="block-20 img" style="background-image: url('imgs/settings-icon.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="user-feedback.html">User Feedback</a></h3>
+   <a href="user-feedback.html" class="block-20 img" style="background-image: url('imgs/feedback-icon.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="emergency-resources.html">Emergency Resources</a></h3>
+   <a href="emergency-resources.html" class="block-20 img" style="background-image: url('imgs/emergency-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="community-chat.html">Events and Meetups </a></h3>
+   <a href="events-meetups.html" class="block-20 img" style="background-image: url('imgs/chat-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+
+    </div>
+    
+  </div>
+</section>	
+
+<footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">safe<span>net</span></h2>
+          <p>A secure platform empowering individuals to anonymously report incidents, fostering community well-being without compromising identity.</p>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4 ml-md-4">
+          <h2 class="ftco-heading-2">Community</h2>
+          <ul class="list-unstyled">
+            <li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Solved Crimes</a></li>
+            <li><a href="emergency-resources.html"><span class="fa fa-chevron-right mr-2"></span>Our Resources</a></li>
+            <li><a href="emergency-preparadness.html"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Company</h2>
+          <ul class="list-unstyled">
+            <li><a href="about.html"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+            <li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Our Work</a></li>
+            <li><a href="contact.html"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Contribute</h2>
+          <ul class="list-unstyled">
+            <li><a href="missing-person.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Missing Person</a></li>
+            <li><a href="wanted-identification.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Wanted Criminal</a></li>
+            <li><a href="reporting.html"><span class="fa fa-chevron-right mr-2"></span>Report a Crime</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Get in touch!</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+              <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+              <li><a href="#"><span class="icon fa fa-envelope pr-4"></span><span class="text">contact@safenet.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

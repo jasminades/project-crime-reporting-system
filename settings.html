@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Settings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-b0vYtGEv/wWWuo3cfkFq4pAwNcSNvcq0CkC5TSgjJaxgpkZZbYFkgi6S5Sg/H6Hb" crossorigin="anonymous"></script>
+
+
+  <style>
+   .settings-section {
+  background-color: #f8f9fa; 
+  padding: 60px 0; 
+}
+
+.settings-section h2 {
+  color: #343a40; 
+}
+
+.nav-tabs .nav-link {
+  color: #dc3545; 
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #dc3545; 
+  color: #fff; 
+  border-color: #dc3545; 
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #dc3545; 
+  border-color: #dc3545; 
+}
+
+.list-group-item {
+  border: 1px solid #dee2e6;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa; 
+}
+
+.list-group-item strong {
+  color: #343a40; 
+}
+
+.list-group-item p {
+  color: #6c757d; 
+}
+
+.list-group-item .custom-control-label::before {
+  border-color: #dc3545; 
+}
+
+.mb-0{
+    color:black;
+}
+
+@media (min-width: 800px) {
+  .settings-section {
+    max-width: 5000px; 
+    margin: 0 auto;
+  }
+
+  .btn{
+    background-color: #dc3545; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-bottom:7rem;
+  }
+
+  .btn :hover {
+    background-color: #c82333; 
+}
+}
+  </style>
+
+    
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+  
+</head>
+<body>
+  
+ <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+   <div class="container">
+     <a class="navbar-brand" href="index.html">safe<span>net</span></a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="oi oi-menu"></span> Menu
+     </button>
+
+     <div class="collapse navbar-collapse" id="ftco-nav">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+         <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+         <li class="nav-item "><a href="registration.html" class="nav-link">Register</a></li>
+         <li class="nav-item"><a href="reporting.html" class="nav-link">Report</a></li>
+         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+         <li class="nav-item active"><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+
+ <section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url('imgs/home-wallpaper6.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end">
+        <div class="col-md-9 ftco-animate pb-5 mb-5">
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Dashboard <i class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-3 bread">Settings</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="settings-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+                <h2 class="h3 mb-4 page-title">Settings</h2>
+                <div class="my-4">
+                    <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Notifications</a>
+                        </li>
+                    </ul>
+                    <h5 class="mb-0 mt-5">System Settings</h5>
+                    <p>Please enable system alert you will get.</p>
+                    <div class="list-group mb-5 shadow">
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Community Safety Alerts</strong>
+                                    <p class="text-muted mb-0">Receive important alerts and tips related to community safety and well-being to contribute to a safer environment for everyone.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert1" checked="" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Data Privacy Alerts</strong>
+                                    <p class="text-muted mb-0"> Stay informed about updates and notifications regarding the privacy and security of your data. We prioritize keeping your information safe and secure.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert2" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <strong class="mb-0">Security</strong>
+                    <p>Control security alert you will be notified.</p>
+                    <div class="list-group mb-5 shadow">
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Unusual activity notifications</strong>
+                                    <p class="text-muted mb-0">Receive alerts for unusual activities detected on your account.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert1" checked="" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Account Access Alerts</strong>
+                                    <p class="text-muted mb-0"> Stay informed about any unauthorized access attempts or suspicious activities related to your account.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert2" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <strong class="mb-0">Notifications Settings</strong>
+                    <p>Select notification you want to receive.</p>
+                    <div class="list-group mb-5 shadow">
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Notify me about new features and updates</strong>
+                                    <p class="text-muted mb-0">Get email notifications for the latest news and updates.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert3" checked="" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Account Usage Insights</strong>
+                                    <p class="text-muted mb-0">Stay informed about helpful tips and insights on optimizing your account usage and ensuring a secure experience.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert4" checked="" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <strong class="mb-0">Notify me about tips on using account</strong>
+                                    <p class="text-muted mb-0">Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="alert5" />
+                                        <span class="custom-control-label"></span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <button type="button" class="btn" onclick="saveChanges()">Save Changes</button>
+                </div>
+            </div>
+        </div>
+        </div>
+                  
+  </section>
+
+  
+
+          
+
+
+
+
+  <footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">safe<span>net</span></h2>
+						<p>A secure platform empowering individuals to anonymously report incidents, fostering community well-being without compromising identity.</p>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-4">
+						<h2 class="ftco-heading-2">Community</h2>
+						<ul class="list-unstyled">
+							<li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Solved Crimes</a></li>
+							<li><a href="emergency-resources.html"><span class="fa fa-chevron-right mr-2"></span>Our Resources</a></li>
+							<li><a href="emergency-preparadness.html"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Company</h2>
+						<ul class="list-unstyled">
+							<li><a href="about.html"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+							<li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Our Work</a></li>
+							<li><a href="contact.html"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Contribute</h2>
+						<ul class="list-unstyled">
+							<li><a href="missing-person.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Missing Person</a></li>
+							<li><a href="wanted-identification.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Wanted Criminal</a></li>
+							<li><a href="reporting.html"><span class="fa fa-chevron-right mr-2"></span>Report a Crime</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Get in touch!</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+								<li><a href="#"><span class="icon fa fa-envelope pr-4"></span><span class="text">contact@safenet.com</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+
+
+
+
+     
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+
+
+</body>
+</html>

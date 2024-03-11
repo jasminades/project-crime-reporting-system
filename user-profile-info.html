@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User Information</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+  <style>
+    .hello-user {
+      color: #fff;
+    }
+
+
+    #saveAdditionalInfoButton {
+    background-color: #b41010; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top:50px;
+
+    }
+    #saveAdditionalInfoButton:hover {
+    background-color: #fafafa; 
+    color:#b41010;
+  }
+
+    #additionalInfoForm {
+        max-width: 400px; 
+        
+    }
+
+    label {
+        display: block; 
+        margin-top: 10px; 
+    }
+
+    input {
+        width: 100%; 
+        padding: 8px; 
+        margin-top: 5px; 
+        box-sizing: border-box; 
+    }
+
+  
+  
+    .ftco-footer {
+      margin-top: 500px;
+    }
+
+    .container.mt-4 {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 70px;
+      
+    }
+
+    h2 {
+      color: #333;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">safe<span>net</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+          <li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="reporting.html" class="nav-link">Report</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item active"><a href="user-dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url('imgs/home-wallpaper6.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end">
+        <div class="col-md-9 ftco-animate pb-5 mb-5">
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Dashboard <i class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-3 bread">User Dashboard</h1>
+          <h2 class="hello-user">Welcome <span id="userName"></span></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-4">
+    <h2>User Information</h2>
+    <ul>
+      <li><strong>First Name:</strong> <span id="firstName"></span></li>
+      <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+      <li><strong>Age:</strong> <span id="userAge"></span></li>
+      <li><strong>Nationality:</strong> <span id="userNationality"></span></li>
+      <li><strong>Phone Number:</strong> <span id="userPhoneNumber"></span></li>
+      <li><strong>Email:</strong> <span id="userEmail"></span></li>
+    </ul>
+
+    <h2>User Statistics</h2>
+    <ul>
+      <li><strong>Number of Reports:</strong> <span id="reportCount">0</span></li>
+      <li><strong>Cases Helped:</strong> <span id="casesHelpedCount">0</span></li>
+    </ul>
+  </div>
+
+  <div class="container mt-4">
+
+    <h2>Additional Information</h2>
+    <ul>
+      <li><strong>Address:</strong> <span id="userAddress"></span></li>
+      <li><strong>Gender:</strong> <span id="gender"></span></li>
+      <li><strong>Timezone:</strong> <span id="userTimezone"></span></li>
+      <li><strong>Emergency Contact:</strong> <span id="userEmergencyContact"></span></li>
+      <li><strong>Emergency Contact Number:</strong> <span id="emergencyContactNumber"></span></li>
+    </ul> <br> <br> <br> <br>
+
+
+    <h2>Add Additional Information</h2>
+    <form id="additionalInfoForm">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+    
+      <label for="gender" id="genderLabel">Gender:</label>
+      <input type="text" id="gender" name="gender">
+
+    
+      <label for="timezone">Timezone:</label>
+      <input type="text" id="timezone" name="timezone">
+    
+      <label for="emergencyContact">Emergency Contact Name:</label>
+      <input type="text" id="emergencyContact" name="emergencyContact">
+    
+      <label for="emergencyContactNumber">Emergency Contact Number:</label>
+      <input type="number" id="emergencyContactNumber" name="emergencyContactNumber">
+    
+      <button type="button" id="saveAdditionalInfoButton" onclick="saveAdditionalInfo()">Save Additional Information</button>
+
+    </form>
+    
+  </div>
+
+  <footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">safe<span>net</span></h2>
+						<p>A secure platform empowering individuals to anonymously report incidents, fostering community well-being without compromising identity.</p>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-4">
+						<h2 class="ftco-heading-2">Community</h2>
+						<ul class="list-unstyled">
+							<li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Solved Crimes</a></li>
+							<li><a href="emergency-resources.html"><span class="fa fa-chevron-right mr-2"></span>Our Resources</a></li>
+							<li><a href="emergency-preparadness.html"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Company</h2>
+						<ul class="list-unstyled">
+							<li><a href="about.html"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+							<li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Our Work</a></li>
+							<li><a href="contact.html"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Contribute</h2>
+						<ul class="list-unstyled">
+							<li><a href="missing-person.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Missing Person</a></li>
+							<li><a href="wanted-identification.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Wanted Criminal</a></li>
+							<li><a href="reporting.html"><span class="fa fa-chevron-right mr-2"></span>Report a Crime</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Get in touch!</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+								<li><a href="#"><span class="icon fa fa-envelope pr-4"></span><span class="text">contact@safenet.com</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+ 
+  var currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+
+  if (currentUser) {
+    
+    updateProfileInfo(currentUser);
+
+    updateAdditionalInfo(currentUser);
+  } else {
+    console.error('User is not logged in.');
+  }
+
+  var saveAdditionalInfoBtn = document.getElementById('saveAdditionalInfoButton');
+  if (saveAdditionalInfoBtn) {
+    saveAdditionalInfoBtn.addEventListener('click', saveAdditionalInfo);
+  }
+});
+
+function updateProfileInfo(user) {
+  document.getElementById('userName').textContent = user.firstName; 
+  document.getElementById('firstName').textContent = user.firstName;
+  document.getElementById('lastName').textContent = user.lastName;
+  document.getElementById('userAge').textContent = user.age;
+  document.getElementById('userNationality').textContent = user.nationality;
+  document.getElementById('userPhoneNumber').textContent = user.phoneNumber;
+  document.getElementById('userEmail').textContent = user.email;
+}
+
+function updateAdditionalInfo(user) {
+  document.getElementById('userAddress').textContent = user.address || 'Not provided';
+  document.getElementById('gender').textContent = user.gender || 'Not provided';
+  document.getElementById('timezone').textContent = user.timezone || 'Not provided';
+  document.getElementById('userEmergencyContact').textContent = user.emergencyContact || 'Not provided';
+  document.getElementById('emergencyContactNumber').textContent = user.emergencyContactNumber || 'Not provided';
+}
+
+function saveAdditionalInfo() {
+  var address = document.getElementById('address').value || 'Not provided';
+  var gender = document.getElementById('gender').value || 'Not provided';
+  var timezone = document.getElementById('timezone').value || 'Not provided';
+  var emergencyContact = document.getElementById('emergencyContact').value || 'Not provided';
+  var emergencyContactNumber = document.getElementById('emergencyContactNumber').value || 'Not provided';
+
+  var currentUser = JSON.parse(sessionStorage.getItem('currentUser')) || {};
+
+  currentUser.address = address;
+  currentUser.gender = gender;
+  currentUser.timezone = timezone;
+  currentUser.emergencyContact = emergencyContact;
+  currentUser.emergencyContactNumber = emergencyContactNumber;
+
+  sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+  updateAdditionalInfo(currentUser);
+
+  alert('Additional information saved successfully!');
+}
+
+
+    </script>
+    
+
+</body>
+
+</html>
