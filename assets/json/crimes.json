@@ -1,0 +1,103 @@
+[
+    {
+      "Crime ID": 1,
+      "User ID": 101,
+      "Title": "Robbery at Main Street",
+      "Description": "A convenience store was robbed by two armed individuals.",
+      "Location": "123 Main Street, City, Country",
+      "Date": "2024-03-27T10:30:00",
+      "Report ID": 201,
+      "Attachment ID": 301
+    },
+    {
+      "Crime ID": 2,
+      "User ID": 102,
+      "Title": "Assault in Central Park",
+      "Description": "A physical altercation occurred between two individuals resulting in injuries.",
+      "Location": "Central Park, City, Country",
+      "Date": "2024-03-25T18:45:00",
+      "Report ID": 202,
+      "Attachment ID": 302
+    },
+    {
+      "Crime ID": 3,
+      "User ID": 103,
+      "Title": "Vandalism at City Hall",
+      "Description": "Graffiti was spray-painted on the walls of City Hall.",
+      "Location": "City Hall, City, Country",
+      "Date": "2024-03-28T09:00:00",
+      "Report ID": 203,
+      "Attachment ID": 303
+    },
+    {
+      "Crime ID": 4,
+      "User ID": 104,
+      "Title": "Burglary at Elm Street",
+      "Description": "A residential property on Elm Street was burglarized.",
+      "Location": "456 Elm Street, City, Country",
+      "Date": "2024-03-29T14:20:00",
+      "Report ID": 204,
+      "Attachment ID": 304
+    },
+    {
+      "Crime ID": 5,
+      "User ID": 105,
+      "Title": "Hit-and-run on Highway 101",
+      "Description": "A pedestrian was hit by a vehicle on Highway 101.",
+      "Location": "Highway 101, City, Country",
+      "Date": "2024-03-26T17:15:00",
+      "Report ID": 205,
+      "Attachment ID": 305
+    },
+    {
+      "Crime ID": 6,
+      "User ID": 106,
+      "Title": "Drug Trafficking at Downtown",
+      "Description": "Illegal drug activity reported in the downtown area.",
+      "Location": "Downtown, City, Country",
+      "Date": "2024-03-30T21:10:00",
+      "Report ID": 206,
+      "Attachment ID": 306
+    },
+    {
+      "Crime ID": 7,
+      "User ID": 107,
+      "Title": "Fraudulent Activities at Bank",
+      "Description": "Suspicious transactions reported at a local bank.",
+      "Location": "Bank, City, Country",
+      "Date": "2024-03-27T12:00:00",
+      "Report ID": 207,
+      "Attachment ID": 307
+    },
+    {
+      "Crime ID": 8,
+      "User ID": 108,
+      "Title": "Arson at Warehouse",
+      "Description": "Fire broke out at a warehouse suspected to be arson.",
+      "Location": "Warehouse, City, Country",
+      "Date": "2024-03-28T20:30:00",
+      "Report ID": 208,
+      "Attachment ID": 308
+    },
+    {
+      "Crime ID": 9,
+      "User ID": 109,
+      "Title": "Domestic Violence Incident",
+      "Description": "Report of domestic violence between spouses.",
+      "Location": "123 Oak Street, City, Country",
+      "Date": "2024-03-26T22:05:00",
+      "Report ID": 209,
+      "Attachment ID": 309
+    },
+    {
+      "Crime ID": 10,
+      "User ID": 110,
+      "Title": "Theft at Shopping Mall",
+      "Description": "Shoplifting incident reported at the local shopping mall.",
+      "Location": "Shopping Mall, City, Country",
+      "Date": "2024-03-29T16:40:00",
+      "Report ID": 210,
+      "Attachment ID": 310
+    }
+  ]
+  

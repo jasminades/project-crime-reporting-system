@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SafeNet Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/spapp.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+  
+  <script src="registration.js" defer></script>
+
+  <style>
+    .centered-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
+      margin-top:7rem;
+
+    }
+
+    .btn-redish {
+        background-color: #ff0000; 
+        color: #ffffff; 
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-redish:hover {
+        background-color: #cc0000; }
+    
+  </style>
+
+</head>
+<body>
+  
+<section class="register-text" id="registerpage">
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end">
+      <div class="col-md-9 ftco-animate pb-5 mb-5">
+      
+       <p class="report-text">Register Today <br><br>SafeNet is a pioneering platform dedicated to providing a secure and confidential space for individuals to report various incidents anonymously. 
+        Nestled at the intersection of privacy and security, SafeNet encourages users to contribute to the well-being of their communities without compromising their identity.<br><br> 
+        With intuitive features such as visual privacy design, comprehensive incident categories, and real-time notifications, SafeNet ensures that the reporting process is not only 
+        seamless but also empowering.<br><br> Our platform empowers users to play a crucial role in fostering a secure and collaborative environment, where every voice,
+         regardless of its anonymity, is valued and respected. Join us in building a safer tomorrow with SafeNet, where reporting meets privacy.
+        
+        <br><br>Thank you for your assistance.</p>
+     </div>
+   </div>
+
+   
+ </div>
+</section>
+
+ <div class="container>
+  <form>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+    </div>
+    <div class="form-group">
+      <label for="nationality">Nationality</label>
+      <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter your nationality" required>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+    <button type="button" class="btn btn-redish" onclick="submitRegistration()">Register</button>
+    <a href="#dashboardpage">User Dashboard</a>
+  </form>
+
+  <p class="mt-3">Already Registered? <a href="#loginpage">Login</a></p>
+
+
+
+  <div class="container mt-5 text-center">
+    <img src="imgs/end-logo.jpg" alt="" class="centered-image">
+  </div>
+</div>
+
+
+
+
+
+  <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.easing.1.3.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.animateNumber.min.js"></script>
+	<script src="assets/js/scrollax.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.spapp.js"></script>
+	<script src="assets/js/jquery.spapp.min.js"></script>
+
+
+  <script>
+    function submitRegistration() {
+        // Get user data from the registration form
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var age = document.getElementById("age").value;
+        var nationality = document.getElementById("nationality").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+  
+        // Perform basic form validation
+        if (!firstName || !lastName || !age || !nationality || !phoneNumber || !email || !password) {
+            alert("Please fill in all fields");
+            return;
+        }
+  
+        // Simulate sending user data to the server
+        // Replace this with actual AJAX or fetch requests to your server
+        simulateServerRegistration(firstName, lastName, age, nationality, phoneNumber, email, password);
+    }
+  
+    function simulateServerRegistration(firstName, lastName, age, nationality, phoneNumber, email, password) {
+        // Simulate storing user data on the server (in a database, for example)
+        // In a real scenario, this would be done through server-side code
+        var user = {
+            firstName: firstName,
+            lastName: lastName,
+            age: age,
+            nationality: nationality,
+            phoneNumber: phoneNumber,
+            email: email,
+            // You may hash the password and perform other necessary server-side tasks
+        };
+  
+        // Simulate storing the user object in a session or a database
+        sessionStorage.setItem('currentUser', JSON.stringify(user));
+  
+        // Redirect to the user dashboard or profile page
+        window.location.href = "user-dashboard.html";
+    }
+    </script>
+
+</body>
+</html>
