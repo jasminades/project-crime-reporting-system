@@ -1,0 +1,103 @@
+[
+    {
+      "Name": "John",
+      "Surname": "Doe",
+      "Criminal ID": 501,
+      "User ID": 101,
+      "Crime": "Robbery at Main Street",
+      "Date Reported": "2024-03-27T10:30:00",
+      "Last Seen": "2024-03-28T08:00:00",
+      "Report ID": 201
+    },
+    {
+      "Name": "Jane",
+      "Surname": "Smith",
+      "Criminal ID": 502,
+      "User ID": 102,
+      "Crime": "Assault in Central Park",
+      "Date Reported": "2024-03-25T18:45:00",
+      "Last Seen": "2024-03-26T09:20:00",
+      "Report ID": 202
+    },
+    {
+      "Name": "Michael",
+      "Surname": "Johnson",
+      "Criminal ID": 503,
+      "User ID": 103,
+      "Crime": "Vandalism at City Hall",
+      "Date Reported": "2024-03-28T09:00:00",
+      "Last Seen": "2024-03-29T14:00:00",
+      "Report ID": 203
+    },
+    {
+      "Name": "Emily",
+      "Surname": "Brown",
+      "Criminal ID": 504,
+      "User ID": 104,
+      "Crime": "Burglary at Elm Street",
+      "Date Reported": "2024-03-29T14:20:00",
+      "Last Seen": "2024-03-30T10:45:00",
+      "Report ID": 204
+    },
+    {
+      "Name": "David",
+      "Surname": "Wilson",
+      "Criminal ID": 505,
+      "User ID": 105,
+      "Crime": "Hit-and-run on Highway 101",
+      "Date Reported": "2024-03-26T17:15:00",
+      "Last Seen": "2024-03-27T11:30:00",
+      "Report ID": 205
+    },
+    {
+      "Name": "Sarah",
+      "Surname": "Taylor",
+      "Criminal ID": 506,
+      "User ID": 106,
+      "Crime": "Drug Trafficking at Downtown",
+      "Date Reported": "2024-03-30T21:10:00",
+      "Last Seen": "2024-03-31T07:50:00",
+      "Report ID": 206
+    },
+    {
+      "Name": "Matthew",
+      "Surname": "Anderson",
+      "Criminal ID": 507,
+      "User ID": 107,
+      "Crime": "Fraudulent Activities at Bank",
+      "Date Reported": "2024-03-27T12:00:00",
+      "Last Seen": "2024-03-28T16:20:00",
+      "Report ID": 207
+    },
+    {
+      "Name": "Olivia",
+      "Surname": "Martinez",
+      "Criminal ID": 508,
+      "User ID": 108,
+      "Crime": "Arson at Warehouse",
+      "Date Reported": "2024-03-28T20:30:00",
+      "Last Seen": "2024-03-29T11:10:00",
+      "Report ID": 208
+    },
+    {
+      "Name": "James",
+      "Surname": "Hernandez",
+      "Criminal ID": 509,
+      "User ID": 109,
+      "Crime": "Domestic Violence Incident",
+      "Date Reported": "2024-03-26T22:05:00",
+      "Last Seen": "2024-03-27T14:35:00",
+      "Report ID": 209
+    },
+    {
+      "Name": "Emma",
+      "Surname": "Young",
+      "Criminal ID": 510,
+      "User ID": 110,
+      "Crime": "Theft at Shopping Mall",
+      "Date Reported": "2024-03-29T16:40:00",
+      "Last Seen": "2024-03-30T09:00:00",
+      "Report ID": 210
+    }
+  ]
+  

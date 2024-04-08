@@ -1,0 +1,83 @@
+[
+    {
+      "Name": "John",
+      "Surname": "Doe",
+      "User ID": 101,
+      "Username": "johndoe",
+      "Email": "johndoe@example.com",
+      "Password": "jd@123"
+    },
+    {
+      "Name": "Jane",
+      "Surname": "Smith",
+      "User ID": 102,
+      "Username": "janesmith",
+      "Email": "janesmith@example.com",
+      "Password": "js@456"
+    },
+    {
+      "Name": "Michael",
+      "Surname": "Johnson",
+      "User ID": 103,
+      "Username": "michaeljohnson",
+      "Email": "michaeljohnson@example.com",
+      "Password": "mj@789"
+    },
+    {
+      "Name": "Emily",
+      "Surname": "Brown",
+      "User ID": 104,
+      "Username": "emilybrown",
+      "Email": "emilybrown@example.com",
+      "Password": "eb@abc"
+    },
+    {
+      "Name": "David",
+      "Surname": "Wilson",
+      "User ID": 105,
+      "Username": "davidwilson",
+      "Email": "davidwilson@example.com",
+      "Password": "dw@def"
+    },
+    {
+      "Name": "Sarah",
+      "Surname": "Taylor",
+      "User ID": 106,
+      "Username": "sarahtaylor",
+      "Email": "sarahtaylor@example.com",
+      "Password": "st@ghi"
+    },
+    {
+      "Name": "Matthew",
+      "Surname": "Anderson",
+      "User ID": 107,
+      "Username": "matthewanderson",
+      "Email": "matthewanderson@example.com",
+      "Password": "ma@jkl"
+    },
+    {
+      "Name": "Olivia",
+      "Surname": "Martinez",
+      "User ID": 108,
+      "Username": "oliviamartinez",
+      "Email": "oliviamartinez@example.com",
+      "Password": "om@mno"
+    },
+    {
+      "Name": "James",
+      "Surname": "Hernandez",
+      "User ID": 109,
+      "Username": "jameshernandez",
+      "Email": "jameshernandez@example.com",
+      "Password": "jh@pqr"
+    },
+    {
+      "Name": "Emma",
+      "Surname": "Young",
+      "User ID": 110,
+      "Username": "emmayoung",
+      "Email": "emmayoung@example.com",
+      "Password": "ey@stu"
+    }
+  ]
+  

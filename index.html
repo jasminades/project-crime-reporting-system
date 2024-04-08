@@ -4,39 +4,50 @@
 	<title> SafeNet </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/spapp.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
 	
-	
-	
-	
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.spapp.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="assets/js/jquery.spapp.min.js"></script>
 	
 </head>
 <body>
-	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				safe<span>net</span></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
-
-			<div class="collapse navbar-collapse" id="ftco-nav">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					safe<span>net</span>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
-					<li class="nav-item"><a href="registration.html" class="nav-link">Register</a></li>
-					<li class="nav-item"><a href="reporting.html" class="nav-link">Report</a></li>
-					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="#aboutpage" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="#workpage" class="nav-link">Work</a></li>
+					<li class="nav-item"><a href="#registerpage" class="nav-link">Register</a></li>
+					<li class="nav-item"><a href="#reportpage" class="nav-link">Report</a></li>
+					<li class="nav-item"><a href="#contactpage" class="nav-link">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+	
+
+	
+	
 	<section class="hero-wrap js-fullheight" style="background-image: url('imgs/home-picture.jpg');">
+		<main id="spapp" role="main">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight align-items-center">
@@ -44,124 +55,148 @@
 					<div class="text">
 						<h1 class="mb-4">Anonymous Reports, Community Protection.</h1>
 						<p>SafeNet: Your confidential and secure platform for reporting incidents, fostering community safety without compromising your privacy.</p>
-						<p class="mb-0"><a href="reporting.html" class="btn btn-primary py-md-3 py-2 px-2 px-md-4">Report Now</a></p>
+						<p class="mb-0"><a href="#reportpage" class="btn btn-primary py-md-3 py-2 px-2 px-md-4">Report Now</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
 
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-sm-12">
+				<main id="spapp" role="main">
+					<section id="aboutpage" data-load="about.html"></section>
+					<section id="workpage" data-load="work.html"></section>
+					<section id="registerpage" data-load="registration.html"></section>
+					<section id="reportpage" data-load="reporting.html"></section>
+					<section id="contactpage" data-load="contact.html"></section>
+					<section id="missingpage" data-load="missing-person.html"></section>
+					<section id="recognized-person-page" data-load="recognized-missing-person.html"></section>
+					<section id="wantedpage" data-load="wanted-identification.html"></section>
+					<section id="wantedreportpage" data-load="wanted-identification-report.html"></section>
+					<section id="eventspage" data-load="events-meetups.html"></section>
+					<section id="loginpage" data-load="login.html"></section>
+					<section id="dashboardpage" data-load="user-dashboard.html"></section>
+					<section id="userprofile" data-load="user-profile-info.html"></section>
+					<section id="historypage" data-load="report-history.html"></section>
+					<section id="notifications" data-load="notifications.html"></section>
+					<section id="settingspage" data-load="settings.html"></section>
+					<section id="feedbackpage" data-load="user-feedback.html"></section>
+					<section id="emergencypage" data-load="emergency-resources.html"></section>
+					<section id="homepage" data-load="index.html"></section>
+
+				  
 	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center no-gutters">
-				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
-					<h2 class="mb-2">About us</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md d-flex align-items-stretch ftco-animate">
-					<div class="media block-6 w-100 services d-block text-center">
-						<div class="media-body py-md-4">
-							
-							<img src="imgs/fingerprint.jpg" alt="Image" class="small-image">
-							<h3>Incident Reporting Interface</h3>
+		<div class="row justify-content-center no-gutters">
+			<section class="ftco-section">
+				<div class="container">
+					<div class="row justify-content-center no-gutters">
+						<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+							<h2 class="mb-2">About us</h2>
 						</div>
-					</div>      
-				</div>
-				<div class="col-md d-flex align-items-stretch ftco-animate">
-					<div class="media block-6 w-100 services d-block text-center">
-						<div class="media-body py-md-4">
-							<img src="imgs/safe-information-logo.jpg" alt="Image" class="small-image">
-							<h3>Security Measures</h3>
-						</div>
-					</div>      
-				</div>
-				<div class="col-md d-flex align-items-stretch ftco-animate">
-					<div class="media block-6 w-100 services d-block text-center">
-						<div class="media-body py-md-4">
-							<img src="imgs/end-logo.jpg" alt="Image" class="small-image">
-							<h3>Safe and Confidential Reporting</h3>
-						</div>
-					</div>      
-				</div>
-				<div class="col-md d-flex align-items-stretch ftco-animate">
-					<div class="media block-6 w-100 services d-block text-center">					
-						<img src="imgs/anon-logo.jpg" alt="Image" class="small-image">
-						<div class="media-body py-md-4">
-							<h3>Anonymous Engagement</h3>
-						</div>
-					</div>      
-				</div>
-				<div class="col-md d-flex align-items-stretch ftco-animate">
-					<div class="media block-6 w-100 services d-block text-center">
-						<div class="media-body py-md-4">
-							<img src="imgs/detective-logo.jpg" alt="Image" class="small-image">
-							<h3>Call-to-Action</h3>
-						</div>
-					</div>      
-				</div>
-			</div>
-			<div class="row wrap-about my-5">
-				<div class="col-md-8">
+					</div>
 					<div class="row">
-						<div class="col-md-6 order-md-last ftco-animate d-flex">
-							<div class="img w-100" style="background-image: url(imgs/rob.jpg);"></div>
+						<div class="col-md d-flex align-items-stretch ftco-animate">
+							<div class="media block-6 w-100 services d-block text-center">
+								<div class="media-body py-md-4">
+									
+									<img src="imgs/fingerprint.jpg" alt="Image" class="small-image">
+									<h3>Incident Reporting Interface</h3>
+								</div>
+							</div>      
 						</div>
-						<div class="col-md-6 ftco-animate">
-							<div class="text text-md-right">
-								<h3>SafeNet - Where Every Report Echoes in Privacy</h3>
-								<p>SafeNet is dedicated to providing a secure and confidential space for individuals to report various incidents anonymously. Our platform, nestled by the shores of privacy and security, encourages users to contribute to the well-being of their communities without compromising their identity.</p>
+						<div class="col-md d-flex align-items-stretch ftco-animate">
+							<div class="media block-6 w-100 services d-block text-center">
+								<div class="media-body py-md-4">
+									<img src="imgs/safe-information-logo.jpg" alt="Image" class="small-image">
+									<h3>Security Measures</h3>
+								</div>
+							</div>      
+						</div>
+						<div class="col-md d-flex align-items-stretch ftco-animate">
+							<div class="media block-6 w-100 services d-block text-center">
+								<div class="media-body py-md-4">
+									<img src="imgs/end-logo.jpg" alt="Image" class="small-image">
+									<h3>Safe and Confidential Reporting</h3>
+								</div>
+							</div>      
+						</div>
+						<div class="col-md d-flex align-items-stretch ftco-animate">
+							<div class="media block-6 w-100 services d-block text-center">					
+								<img src="imgs/anon-logo.jpg" alt="Image" class="small-image">
+								<div class="media-body py-md-4">
+									<h3>Anonymous Engagement</h3>
+								</div>
+							</div>      
+						</div>
+						<div class="col-md d-flex align-items-stretch ftco-animate">
+							<div class="media block-6 w-100 services d-block text-center">
+								<div class="media-body py-md-4">
+									<img src="imgs/detective-logo.jpg" alt="Image" class="small-image">
+									<h3>Call-to-Action</h3>
+								</div>
+							</div>      
+						</div>
+					</div>
+					<div class="row wrap-about my-5">
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-6 order-md-last ftco-animate d-flex">
+									<div class="img w-100" style="background-image: url(imgs/rob.jpg);"></div>
+								</div>
+								<div class="col-md-6 ftco-animate">
+									<div class="text text-md-right">
+										<h3>SafeNet - Where Every Report Echoes in Privacy</h3>
+										<p>SafeNet is dedicated to providing a secure and confidential space for individuals to report various incidents anonymously. Our platform, nestled by the shores of privacy and security, encourages users to contribute to the well-being of their communities without compromising their identity.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 ftco-animate">
+							<div class="text">
+								<p>With intuitive features like a visual privacy design, comprehensive incident categories, and real-time notifications, SafeNet ensures that the reporting process is not only seamless but also empowering. Join us in building a safer tomorrow, where every voice, regardless of its anonymity, plays a crucial role in fostering a secure and collaborative environment. SafeNet - Where Reporting Meets Privacy.
+		
+		
+		
+		
+								</p>
+								<p><a href="#workpage" class="btn btn-primary">View all projects</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-4">
+							<div class="services-2 d-flex ftco-animate">
+								<span>01</span>
+								<div class="text">
+									<h3>Anonymous Incident Reporting</h3>
+									<p>A secure space for your voice. Share incidents without compromise, securely and anonymously.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="services-2 d-flex ftco-animate">
+								<span>02</span>
+								<div class="text">
+									<h3>Crisis Management and Resolution</h3>
+									<p>Whether it's a cybersecurity breach or a community incident, our platform guides you through crisis response, resolution strategies, and facilitates a swift return to normalcy.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="services-2 d-flex ftco-animate">
+								<span>03</span>
+								<div class="text">
+									<h3>Real-time Incident Response</h3>
+									<p>From immediate threat detection to swift action. Experience the power of rapid incident response with SafeNet at your service.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 ftco-animate">
-					<div class="text">
-						<p>With intuitive features like a visual privacy design, comprehensive incident categories, and real-time notifications, SafeNet ensures that the reporting process is not only seamless but also empowering. Join us in building a safer tomorrow, where every voice, regardless of its anonymity, plays a crucial role in fostering a secure and collaborative environment. SafeNet - Where Reporting Meets Privacy.
-
-
-
-
-						</p>
-						<p><a href="work.html" class="btn btn-primary">View all projects</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="row mt-5">
-				<div class="col-md-4">
-					<div class="services-2 d-flex ftco-animate">
-						<span>01</span>
-						<div class="text">
-							<h3>Anonymous Incident Reporting</h3>
-							<p>A secure space for your voice. Share incidents without compromise, securely and anonymously.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="services-2 d-flex ftco-animate">
-						<span>02</span>
-						<div class="text">
-							<h3>Crisis Management and Resolution</h3>
-							<p>Whether it's a cybersecurity breach or a community incident, our platform guides you through crisis response, resolution strategies, and facilitates a swift return to normalcy.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="services-2 d-flex ftco-animate">
-						<span>03</span>
-						<div class="text">
-							<h3>Real-time Incident Response</h3>
-							<p>From immediate threat detection to swift action. Experience the power of rapid incident response with SafeNet at your service.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="ftco-section ftco-portfolio bg-light">
-		<div class="row justify-content-center no-gutters">
+			</section>
 			<div class="col-md-12 heading-section text-center ftco-animate mb-5">
 				<h2 class="mb-2">Our Works</h2>
 			</div>
@@ -180,7 +215,7 @@
 									<div class="desc">
 										<div class="top">
 											<span class="subheading">Incident Reporting</span>
-											<h2 class="mb-2"><a href="reporting.html">Missing Person</a></h2>
+											<h2 class="mb-2"><a href="#reportpage">Missing Person</a></h2>
 										</div>
 										<div class="absolute">
 											<p>SafeNet empowers users to report missing persons anonymously, contributing to swift community response and aiding law enforcement in their efforts. Your vigilance can make a difference.</p>
@@ -188,7 +223,7 @@
 												<div class="img" style="background-image: url(images/person_reporting.jpg);"></div>
 												
 											</div>
-											<p><a href="reporting.html" class="custom-btn">Report Missing Person</a></p>
+											<p><a href="#reportpage" class="custom-btn">Report Missing Person</a></p>
 										</div>
 									</div>
 								</div>
@@ -208,14 +243,14 @@
 									<div class="desc text-md-right">
 										<div class="top">
 											<span class="subheading">Cybersecurity</span>
-											<h2 class="mb-2"><a href="online-presence.html">Cyberattack Response</a></h2>
+											<h2 class="mb-2"><a href="#reportpage">Cyberattack Response</a></h2>
 										</div>
 										<div class="absolute">
 											<p>SafeNet provides a secure channel for users to report cyberattacks, ensuring swift incident response and the mitigation of digital threats. Your insights contribute to a safer digital environment for everyone.</p>
 											<div class="icon d-flex align-items-center mb-4">
 												<div class="img" style="background-image: url(images/cyberattack_reporting.jpg);"></div>
 											</div>
-											<p><a href="reporting.html" class="custom-btn">Report Cyberattack</a></p>
+											<p><a href="#reportpage" class="custom-btn">Report Cyberattack</a></p>
 										</div>
 										</div>
 									</div>
@@ -236,14 +271,14 @@
 									<div class="desc">
 										<div class="top">
 											<span class="subheading">Community Safety</span>
-											<h2 class="mb-2"><a href="missing-person.html">Recognize a Missing Person</a></h2>
+											<h2 class="mb-2"><a href="#missingpage">Recognize a Missing Person</a></h2>
 										</div>
 										<div class="absolute">
 											<p>SafeNet encourages users to contribute to community safety by recognizing missing persons. Anonymously share information and help reunite families. Your vigilance can bring solace and aid in community well-being.</p>
 											<div class="icon d-flex align-items-center mb-4">
 												<div class="img" style="background-image: url(images/missing_person_recognition.jpg);"></div>
 											</div>
-											<p><a href="missing-person.html" class="custom-btn">Contribute Information</a></p>
+											<p><a href="#missingpage" class="custom-btn">Contribute Information</a></p>
 										</div>
 										
 									</div>
@@ -264,14 +299,14 @@
 									<div class="desc text-md-right">
 										<div class="top">
 											<span class="subheading">Anonymous Reporting</span>
-											<h2 class="mb-2"><a href="reporting.html">Report Suspicious Activity</a></h2>
+											<h2 class="mb-2"><a href="#reportpage">Report Suspicious Activity</a></h2>
 										</div>
 										<div class="absolute">
 											<p>SafeNet empowers users to anonymously report suspicious activities, ensuring a secure channel for community members to share vital information. Your anonymous reports contribute to a safer community for all.</p>
 											<div class="icon d-flex align-items-center mb-4">
 												<div class="img" style="background-image: url(images/suspicious_activity_reporting.jpg);"></div>
 											</div>
-											<p><a href="reporting.html" class="custom-btn">Report Suspicious Activity</a></p>
+											<p><a href="#reportpage" class="custom-btn">Report Suspicious Activity</a></p>
 										</div>
 									</div>
 								</div>
@@ -291,14 +326,14 @@
 									<div class="desc">
 										<div class="top">
 											<span class="subheading">Crime Reporting</span>
-											<h2 class="mb-2"><a href="work.html">Report Vandalism</a></h2>
+											<h2 class="mb-2"><a href="#reportpage">Report Vandalism</a></h2>
 										</div>
 										<div class="absolute">
 											<p>SafeNet enables users to report vandalism incidents anonymously. Contribute to community safety by sharing details about vandalism activities, aiding in the swift resolution of such crimes. Your vigilance protects our shared spaces.</p>
 											<div class="icon d-flex align-items-center mb-4">
 												<div class="img" style="background-image: url(images/vandalism_reporting.jpg);"></div>
 											</div>
-											<p><a href="reporting.html" class="custom-btn">Report Vandalism</a></p>
+											<p><a href="#reportpage" class="custom-btn">Report Vandalism</a></p>
 										</div>
 									</div>
 								</div>
@@ -318,7 +353,7 @@
 									<div class="desc text-md-right">
 										<div class="top">
 											<span class="subheading">Crime Solving</span>
-											<h2 class="mb-2"><a href="wanted-identification.html">Identify a Wanted Criminal</a></h2>
+											<h2 class="mb-2"><a href="#wantedpage">Identify a Wanted Criminal</a></h2>
 										</div>
 										<div class="absolute">
 											<p>SafeNet empowers users to anonymously share information and help law enforcement identify wanted criminals.
@@ -327,7 +362,7 @@
 												Your vigilance makes a significant impact.</p>
 											<div class="icon d-flex align-items-center mb-4">
 											</div>
-											<p><a href="wanted-identification.html" class="custom-btn">Recognize Wanted Criminals</a></p>
+											<p><a href="#wantedpage" class="custom-btn">Recognize Wanted Criminals</a></p>
 										</div>
 									</div>
 								</div>
@@ -336,105 +371,120 @@
 					</div>
 				</div>
 
+				<section class="ftco-section testimony-section">
+					<div class="container">
+						<div class="row justify-content-center mb-5">
+							<div class="col-md-8 text-center heading-section ftco-animate">
+								<h2 class="take-action">Take Action</h2>
+							</div>
+						</div>
+						
+			
+						<div class="row mt-5">
+							<div class="col-md-12">
+								<div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url(imgs/wallpaper.jpg);">
+									<div class="col-md-4 ftco-animate">
+										<h2>Fill out the report anonymously!</h2>
+										<p>Anonymously reporting crimes is a crucial tool in community safety. <br>Platforms like SafeNet offer a secure space <br>for individuals to share valuable 
+											information without revealing their identity. <br>
+											This anonymity promotes a broader participation in crime prevention,<br> ensuring a safer environment for all
+											 by empowering individuals to contribute without fear of reprisal.</p>
+										<p><a href="#reportpage" class="btn btn-primary">Report Now</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			
+				<section class="ftco-section bg-light blog-part">
+					<div class="container">
+						<div class="row justify-content-center mb-5">
+							<div class="col-md-7 heading-section text-center ftco-animate">
+								<h2 class="blog-heading">Recent Blog</h2>
+							</div>
+						</div>
+						<div class="row d-flex">
+							<div class="col-md-3 d-flex ftco-animate">
+								<div class="blog-entry justify-content-end">
+									<div class="text">
+										<h3 class="heading mb-3"><a href="#eventspage">Emergency Preparedness:Blueprint for Every Household</a></h3>
+										<a href="#eventspage" class="block-20 img" style="background-image: url('imgs/household-logo.jpg');">
+										</a>
+										<div class="meta mb-3">
+											<div><a href="#">March 9, 2024</a></div>
+											<div><a href="#">Admin</a></div>
+											<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+										</div>
+										<p>When it comes to emergencies, preparedness is the key to minimizing risks and ensuring the safety of your loved ones. Develop a comprehensive emergency plan that includes evacuation routes, designated meeting points, and a well-stocked emergency kit. Stay informed about local emergency services and contact numbers, empowering your household to respond swiftly and effectively in unforeseen circumstances.</p>
+										<a href="#eventspage">Read more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 d-flex ftco-animate">
+								<div class="blog-entry justify-content-end">
+									<div class="text">
+										<h3 class="heading mb-3"><a href="#eventspage">Offline Security: Protecting Your Home and Family</a></h3>
+										<a href="#eventspage" class="block-20 img" style="background-image: url('imgs/household-secuity-logo.jpg');">
+										</a>
+										<div class="meta mb-3">
+											<div><a href="#">March 3, 2024</a></div>
+											<div><a href="#">Admin</a></div>
+											<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+										</div>
+										<p>While the digital realm demands attention, offline security is equally vital. Secure your physical space by fortifying entry points, installing quality locks, and keeping your home well-lit. Educate family members about personal safety, share emergency contact information, and establish protocols for unexpected situations. By combining digital vigilance with tangible security measures, you create a holistic approach to safeguarding what matters most..</p>
+										<a href="#eventspage">Read more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 d-flex ftco-animate">
+								<div class="blog-entry justify-content-end">
+									<div class="text">
+										<h3 class="heading mb-3"><a href="#eventspage">Securing Your Online Presence: Best Practices for a Digital World</a></h3>
+										<a href="#eventspage" class="block-20 img" style="background-image: url('imgs/online-security-logo.jpg');">
+										</a>
+										<div class="meta mb-3">
+											<div><a href="#">February 27, 2024</a></div>
+											<div><a href="#">Admin</a></div>
+											<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+										</div>
+										<p>In today's interconnected world, safeguarding your online presence is paramount. From creating strong, unique passwords to enabling two-factor authentication, adopting robust cybersecurity practices ensures a fortified digital fortress. Stay informed about the latest phishing techniques, keep software updated, and exercise caution when sharing personal information online. Prioritize your digital well-being to navigate the virtual landscape with confidence.</p>
+										<a href="#eventspage">Read more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 d-flex ftco-animate">
+								<div class="blog-entry justify-content-end">
+									<div class="text">
+										<h3 class="heading mb-3"><a href="#eventspage">Neighborhood Watch: Building Community Security</a></h3>
+										<a href="#eventspage" class="block-20 img" style="background-image: url('imgs/neighboorhood-logo.jpg');">
+										</a>
+										<div class="meta mb-3">
+											<div><a href="#">February 22, 2024</a></div>
+											<div><a href="#">Admin</a></div>
+											<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+										</div>
+										<p>The strength of a community lies in its unity, and establishing a neighborhood watch program can significantly enhance local safety. Getting to know your neighbors, sharing information about suspicious activities, and collaborating on security measures creates a collective shield against potential threats. From organizing regular meetings to fostering open communication, building a connected community fosters a secure and supportive environment for everyone.</p>
+										<a href="#eventspage">Read more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="degree-left-footer"></div>
+				</section>		
+
 				
 
 			</div>
 		</div>
 		
-
-		
-		<div class="degree-left"></div>
 	</section>
-
-	<section>
-		<div class="meet-us">
-			<h3 class="meet-us-heading">Join us at Events and Meetups</h3>
-			<a href="events-meetups.html">Find Out More!</a>
-			<p><br>Discover a sense of community and security by joining us at our upcoming events and meetups. Whether you're interested in enhancing your personal safety, exploring the latest in crime prevention technologies, or connecting with like-minded individuals, our diverse gatherings offer valuable insights and opportunities. </p>
+</main>
+				
 		</div>
-	</section>
-
-	<section class="ftco-section bg-light">
-		<div class="container">
-			<div class="row justify-content-center mb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>Recent Blog</h2>
-				</div>
-			</div>
-			<div class="row d-flex">
-				<div class="col-md-3 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<div class="text">
-							<h3 class="heading mb-3"><a href="emergency-preparadness.html">Emergency Preparedness:Blueprint for Every Household</a></h3>
-							<a href="emergency-preparadness.html" class="block-20 img" style="background-image: url('imgs/household-logo.jpg');">
-							</a>
-							<div class="meta mb-3">
-								<div><a href="#">March 9, 2024</a></div>
-								<div><a href="#">Admin</a></div>
-								<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-							</div>
-							<p>When it comes to emergencies, preparedness is the key to minimizing risks and ensuring the safety of your loved ones. Develop a comprehensive emergency plan that includes evacuation routes, designated meeting points, and a well-stocked emergency kit. Stay informed about local emergency services and contact numbers, empowering your household to respond swiftly and effectively in unforeseen circumstances.</p>
-						</div>
-						
-					<a href="emergency-preparadness.html">Read more</a>
-					</div>
-				</div>
-				<div class="col-md-3 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<div class="text">
-							<h3 class="heading mb-3"><a href="offline-security.html">Offline Security: Protecting Your Home and Family</a></h3>
-							<a href="offline-security.html" class="block-20 img" style="background-image: url('imgs/household-secuity-logo.jpg');">
-							</a>
-							<div class="meta mb-3">
-								<div><a href="#">March 3, 2024</a></div>
-								<div><a href="#">Admin</a></div>
-								<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-							</div>
-							<p>While the digital realm demands attention, offline security is equally vital. Secure your physical space by fortifying entry points, installing quality locks, and keeping your home well-lit. Educate family members about personal safety, share emergency contact information, and establish protocols for unexpected situations. By combining digital vigilance with tangible security measures, you create a holistic approach to safeguarding what matters most..</p>
-						</div>
-						
-					<a href="offline-security.html">Read more</a>
-					</div>
-				</div>
-				<div class="col-md-3 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<div class="text">
-							<h3 class="heading mb-3"><a href="online-presence.html">Securing Your Online Presence: Best Practices for a Digital World</a></h3>
-							<a href="online-presence.html" class="block-20 img" style="background-image: url('imgs/online-security-logo.jpg');">
-							</a>
-							<div class="meta mb-3">
-								<div><a href="#">February 27, 2024</a></div>
-								<div><a href="#">Admin</a></div>
-								<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-							</div>
-							<p>In today's interconnected world, safeguarding your online presence is paramount. From creating strong, unique passwords to enabling two-factor authentication, adopting robust cybersecurity practices ensures a fortified digital fortress. Stay informed about the latest phishing techniques, keep software updated, and exercise caution when sharing personal information online. Prioritize your digital well-being to navigate the virtual landscape with confidence.</p>
-						</div>
-						
-					<a href="online-presence.html">Read more</a>
-					</div>
-				</div>
-				<div class="col-md-3 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<div class="text">
-							<h3 class="heading mb-3"><a href="neighborhood-watch.html">Neighborhood Watch: Building Community Security</a></h3>
-							<a href="neighborhood-watch.html" class="block-20 img" style="background-image: url('imgs/neighboorhood-logo.jpg');">
-							</a>
-							<div class="meta mb-3">
-								<div><a href="#">February 22, 2024</a></div>
-								<div><a href="#">Admin</a></div>
-								<div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-							</div>
-							<p>The strength of a community lies in its unity, and establishing a neighborhood watch program can significantly enhance local safety. Getting to know your neighbors, sharing information about suspicious activities, and collaborating on security measures creates a collective shield against potential threats. From organizing regular meetings to fostering open communication, building a connected community fosters a secure and supportive environment for everyone.</p>
-						</div>
-						
-					<a href="neighborhood-watch.html">Read more</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="degree-left-footer"></div>
-	</section>		
-
+	</div>
+	
 	
 
 	<footer class="ftco-footer ftco-section">
@@ -450,9 +500,9 @@
 					<div class="ftco-footer-widget mb-4 ml-md-4">
 						<h2 class="ftco-heading-2">Community</h2>
 						<ul class="list-unstyled">
-							<li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Solved Crimes</a></li>
-							<li><a href="emergency-resources.html"><span class="fa fa-chevron-right mr-2"></span>Our Resources</a></li>
-							<li><a href="emergency-preparadness.html"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+							<li><a href="#workpage"><span class="fa fa-chevron-right mr-2"></span>Solved Crimes</a></li>
+							<li><a href="#emergencypage"><span class="fa fa-chevron-right mr-2"></span>Our Resources</a></li>
+							<li><a href="#workpage"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
 						</ul>
 					</div>
 				</div>
@@ -461,9 +511,9 @@
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Company</h2>
 						<ul class="list-unstyled">
-							<li><a href="about.html"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
-							<li><a href="work.html"><span class="fa fa-chevron-right mr-2"></span>Our Work</a></li>
-							<li><a href="contact.html"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+							<li><a href="#aboutpage"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+							<li><a href="#workpage"><span class="fa fa-chevron-right mr-2"></span>Our Work</a></li>
+							<li><a href="#contactpage"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -471,9 +521,9 @@
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Contribute</h2>
 						<ul class="list-unstyled">
-							<li><a href="missing-person.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Missing Person</a></li>
-							<li><a href="wanted-identification.html"><span class="fa fa-chevron-right mr-2"></span>Identify a Wanted Criminal</a></li>
-							<li><a href="reporting.html"><span class="fa fa-chevron-right mr-2"></span>Report a Crime</a></li>
+							<li><a href="#missingpage"><span class="fa fa-chevron-right mr-2"></span>Identify a Missing Person</a></li>
+							<li><a href="#wantedpage"><span class="fa fa-chevron-right mr-2"></span>Identify a Wanted Criminal</a></li>
+							<li><a href="#reportpage"><span class="fa fa-chevron-right mr-2"></span>Report a Crime</a></li>
 						</ul>
 					</div>
 				</div>
@@ -493,24 +543,82 @@
 		</footer>
 		
 		
+		
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/jquery.easing.1.3.js"></script>
+		<script src="assets/js/jquery.waypoints.min.js"></script>
+		<script src="assets/js/jquery.stellar.min.js"></script>
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<script src="assets/js/jquery.animateNumber.min.js"></script>
+		<script src="assets/js/scrollax.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.spapp.js"></script>
+		<script src="assets/js/jquery.spapp.min.js"></script>
+  		<script src="/assets/js/fetchscript.js"></script> 
 
+  
+		<script>
+			$(document).ready(function () {
+				let app = $.spapp({
+					templateDir: "./views/",
+					cache: false, 
+					defaultPage: "#homepage", 
+					pageNotFound: function (page) {
+						console.log("Page not found: ", page);
+					}
+				});
+				app.run();
+		
+				$('.navbar-nav>li>a').on('click', function () {
+					$('.navbar-collapse').collapse('hide');
+				});
+		
+				$('.navbar-nav>li>a').on('click', function (e) {
+					let page = $(this).attr('href');
+					app.load(page, {replaceContent: true}); 
+					e.preventDefault(); 
+				});
+			});
+		</script>
+
+
+
+		<script>
+		function fetchData() {
+			const xhr = new XMLHttpRequest();
+
+			const url = 'mockData.js';
+
+			xhr.open('GET', url, true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {
+					const data = JSON.parse(xhr.responseText);
+					displayData(data);
+				} else {
+					console.error('Error fetching data:', xhr.statusText);
+				}
+			};
+
+			xhr.send();
+		}
+
+		function displayData(data) {
+			const container = document.getElementById('data-container');
+
+			data.forEach(item => {
+				const div = document.createElement('div');
+				div.innerHTML = `<h2>${item.name}</h2><p>${item.description}</p>`;
+				container.appendChild(div);
+			});
+		}
+
+		window.onload = fetchData;
+
+		</script>
 		
 
-
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/jquery.waypoints.min.js"></script>
-		<script src="js/jquery.stellar.min.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/jquery.animateNumber.min.js"></script>
-		<script src="js/scrollax.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-		<script src="js/google-map.js"></script>
-		<script src="js/main.js"></script>
-		
 	</body>
 	</html>
