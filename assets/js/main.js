@@ -211,7 +211,7 @@
 	};
 	contentWayPoint();
 
-
+/*
 	// magnific popup
 	$('.image-popup').magnificPopup({
     type: 'image',
@@ -240,9 +240,9 @@
     removalDelay: 160,
     preloader: false,
 
-    fixedContentPos: false
+    fixedContentPos: falses
   });
 
-
+*/
 })(jQuery);
 
