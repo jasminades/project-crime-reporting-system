@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SafeNet Reporting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/spapp.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+    
+  <!-- Your custom JavaScript code -->
+  <script>
+      $(document).ready(function() {
+            // Event listener for form submission
+            $('#crimeReportForm').submit(function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        console.log('Form submitted'); // Check if this log appears in the console
+
+        // Serialize the form data into a query string
+        var formData = $(this).serialize();
+        
+                // Send an AJAX POST request to the server
+                $.ajax({
+                    type: 'POST',
+                    url: 'submit_crime_report.php', // Replace 'submit_crime_report.php' with the path to your server-side script
+                    data: formData,
+                    success: function(response) {
+                      alert('Submitted successfully');
+                        // You can show a success message to the user or redirect them to another page
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle errors
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+  </script>
+</head>
+<body>
+  
+ 
+  <div class="overlay"></div>
+  <div class="container" id="reportpage">
+    <div class="row no-gutters slider-text js-fullheight align-items-end">
+      <div class="col-md-9 ftco-animate pb-5 mb-5">
+        <h1 class="report-title">Reporting</h1>
+      
+       <p class="report-text">REPORTING <br><br>Please ensure precise and detailed entries when reporting crime. <br>
+        Remember, the smallest details can make a significant contribution to the investigation. 
+        <br><br>If possible, take clear pictures or videos of any evidence you come across, but be cautious and do not touch or 
+        remove anything from the location. Your cooperation is vital for a thorough investigation.<br><br> Your proactive involvement can make a difference in resolving these cases.
+        
+        <br><br>Thank you for your assistance.</p>
+     </div>
+   </div>
+ </div>
+</section>
+
+
+<div class="reporting" style="margin-bottom: 300px;">
+    <h2 class="mb-4">SafeNet - Report a Crime</h2>
+    <form id="crimeReportForm">
+        <div class="form-group">
+          <p>NOTE: Please ensure precise and detailed entries when reporting crime. 
+            Remember, the smallest details can make a significant contribution to the investigation. 
+            If possible, take clear pictures or videos of any evidence you come across, but be cautious and do not touch or remove anything from the location. 
+            Your cooperation is vital for a thorough investigation.
+             Your proactive involvement can make a difference in resolving these cases. Thank you for your assistance.
+          </p>
+            <label for="crimeType">Type of Crime</label>
+            <input type="text" class="form-control" id="crimeType" placeholder="Enter the type of crime" required>
+          </div>
+          <div class="form-group">
+            <label for="crimeDescription">Crime Description</label>
+            <textarea class="form-control" id="crimeDescription" rows="4" placeholder="Provide details about the crime" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter the location of the crime" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Date of Crime</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+          <div class="form-group">
+            <label for="incidentTime">Time of Incident</label>
+            <input type="time" class="form-control" id="incidentTime" required>
+          </div>
+          <div class="form-group">
+            <label for="witnessDetails">Witness Information</label>
+            <textarea class="form-control" id="witnessDetails" rows="3" placeholder="Provide details about witnesses"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="suspectDetails">Suspect Information</label>
+            <textarea class="form-control" id="suspectDetails" rows="3" placeholder="Provide details about suspects"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="evidence">Evidence</label>
+            <input type="file" class="form-control-file" id="evidence">
+          </div>
+          <div class="form-group">
+            <label for="threatened">Do you feel threatened?</label>
+            <select class="form-control" id="threatened">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="policeStation">Local Police Station</label>
+            <input type="text" class="form-control" id="policeStation" placeholder="Enter the closest police station" required>
+          </div>
+          <div class="form-group">
+            <label for="additionalComments">Additional Comments</label>
+            <textarea class="form-control" id="additionalComments" rows="4" placeholder="Any additional comments or information"></textarea>
+          </div>
+          <button type="submit" class="btn btn-redish">Submit Report</button>
+
+        </form>
+        
+<div class="degree-left"></div>
+        
+</div>
+
+</div>
+
+
+</div>
+</section>	
+
+
+    
+   
+    
+
+      
+
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/jquery.easing.1.3.js"></script>
+      <script src="assets/js/jquery.waypoints.min.js"></script>
+      <script src="assets/js/jquery.stellar.min.js"></script>
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script src="assets/js/jquery.animateNumber.min.js"></script>
+      <script src="assets/js/scrollax.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.spapp.js"></script>
+      <script src="assets/js/jquery.spapp.min.js"></script>
+
+</body>
+</html>
