@@ -13,27 +13,21 @@
 	<link rel="stylesheet" href="/assets/css/style.css">
 
     
-  <!-- Your custom JavaScript code -->
   <script>
       $(document).ready(function() {
-            // Event listener for form submission
             $('#crimeReportForm').submit(function(event) {
-        // Prevent the default form submission behavior
         event.preventDefault();
 
-        console.log('Form submitted'); // Check if this log appears in the console
+        console.log('Form submitted'); 
 
-        // Serialize the form data into a query string
         var formData = $(this).serialize();
         
-                // Send an AJAX POST request to the server
                 $.ajax({
                     type: 'POST',
-                    url: 'submit_crime_report.php', // Replace 'submit_crime_report.php' with the path to your server-side script
+                    url: 'submit_crime_report.php', 
                     data: formData,
                     success: function(response) {
                       alert('Submitted successfully');
-                        // You can show a success message to the user or redirect them to another page
                     },
                     error: function(xhr, status, error) {
                         // Handle errors
@@ -135,12 +129,6 @@
 </div>
 </section>	
 
-
-    
-   
-    
-
-      
 
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
