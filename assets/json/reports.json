@@ -1,84 +1,72 @@
 [
-    {
-      "Report ID": 201,
-      "User ID": 101,
-      "Title": "Robbery at Main Street",
-      "Description": "A convenience store was robbed by two armed individuals.",
-      "Date": "2024-03-27T10:30:00",
-      "Attachment ID": 301
-    },
-    {
-      "Report ID": 202,
-      "User ID": 102,
-      "Title": "Assault in Central Park",
-      "Description": "A physical altercation occurred between two individuals resulting in injuries.",
-      "Date": "2024-03-25T18:45:00",
-      "Attachment ID": 302
-    },
-    {
-      "Report ID": 203,
-      "User ID": 103,
-      "Title": "Vandalism at City Hall",
-      "Description": "Graffiti was spray-painted on the walls of City Hall.",
-      "Date": "2024-03-28T09:00:00",
-      "Attachment ID": 303
-    },
-    {
-      "Report ID": 204,
-      "User ID": 104,
-      "Title": "Burglary at Elm Street",
-      "Description": "A residential property on Elm Street was burglarized.",
-      "Date": "2024-03-29T14:20:00",
-      "Attachment ID": 304
-    },
-    {
-      "Report ID": 205,
-      "User ID": 105,
-      "Title": "Hit-and-run on Highway 101",
-      "Description": "A pedestrian was hit by a vehicle on Highway 101.",
-      "Date": "2024-03-26T17:15:00",
-      "Attachment ID": 305
-    },
-    {
-      "Report ID": 206,
-      "User ID": 106,
-      "Title": "Drug Trafficking at Downtown",
-      "Description": "Illegal drug activity reported in the downtown area.",
-      "Date": "2024-03-30T21:10:00",
-      "Attachment ID": 306
-    },
-    {
-      "Report ID": 207,
-      "User ID": 107,
-      "Title": "Fraudulent Activities at Bank",
-      "Description": "Suspicious transactions reported at a local bank.",
-      "Date": "2024-03-27T12:00:00",
-      "Attachment ID": 307
-    },
-    {
-      "Report ID": 208,
-      "User ID": 108,
-      "Title": "Arson at Warehouse",
-      "Description": "Fire broke out at a warehouse suspected to be arson.",
-      "Date": "2024-03-28T20:30:00",
-      "Attachment ID": 308
-    },
-    {
-      "Report ID": 209,
-      "User ID": 109,
-      "Title": "Domestic Violence Incident",
-      "Description": "Report of domestic violence between spouses.",
-      "Date": "2024-03-26T22:05:00",
-      "Attachment ID": 309
-    },
-    {
-      "Report ID": 210,
-      "User ID": 110,
-      "Title": "Theft at Shopping Mall",
-      "Description": "Shoplifting incident reported at the local shopping mall.",
-      "Date": "2024-03-29T16:40:00",
-      "Attachment ID": 310
-    }
-  ]
-  
-
+  {
+    "Report ID": "R001",
+    "Reporter Full Name": "John Doe",
+    "Contact Number": "123-456-7890",
+    "Description": "Missing person report - Jane Doe, age 30, last seen near downtown.",
+    "Date": "2024-05-01"
+  },
+  {
+    "Report ID": "R002",
+    "Reporter Full Name": "Alice Smith",
+    "Contact Number": "987-654-3210",
+    "Description": "Cybercrime report - Unauthorized access to bank account.",
+    "Date": "2024-05-02"
+  },
+  {
+    "Report ID": "R003",
+    "Reporter Full Name": "Bob Johnson",
+    "Contact Number": "555-555-5555",
+    "Description": "Assault report - Victim assaulted in the park.",
+    "Date": "2024-05-03"
+  },
+  {
+    "Report ID": "R004",
+    "Reporter Full Name": "Emily Brown",
+    "Contact Number": "777-777-7777",
+    "Description": "Burglary report - House broken into, valuables stolen.",
+    "Date": "2024-05-04"
+  },
+  {
+    "Report ID": "R005",
+    "Reporter Full Name": "Michael Wilson",
+    "Contact Number": "111-222-3333",
+    "Description": "Fraud report - Scammed through online purchase.",
+    "Date": "2024-05-05"
+  },
+  {
+    "Report ID": "R006",
+    "Reporter Full Name": "Sarah Adams",
+    "Contact Number": "123-596-1589",
+    "Description": "Drug-related crime report - Suspicious activity reported in alleyway.",
+    "Date": "2024-05-06"
+  },
+  {
+    "Report ID": "R007",
+    "Reporter Full Name": "David Lee",
+    "Contact Number": "357-159-4568",
+    "Description": "Vandalism report - Graffiti found on public property.",
+    "Date": "2024-05-07"
+  },
+  {
+    "Report ID": "R008",
+    "Reporter Full Name": "Emma Taylor",
+    "Contact Number": "888-888-8888",
+    "Description": "Robbery report - Convenience store held up at gunpoint.",
+    "Date": "2024-05-08"
+  },
+  {
+    "Report ID": "R009",
+    "Reporter Full Name": "James Clark",
+    "Contact Number": "135-785-1234",
+    "Description": "Domestic violence report - Disturbance reported by neighbors.",
+    "Date": "2024-05-09"
+  },
+  {
+    "Report ID": "R010",
+    "Reporter Full Name": "Olivia Martinez",
+    "Contact Number": "000-000-0000",
+    "Description": "Traffic accident report - Collision at intersection, injuries reported.",
+    "Date": "2024-05-10"
+  }
+]
