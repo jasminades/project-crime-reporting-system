@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SafeNet Identify A Wanted Criminal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/spapp.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+    
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .more-wanted{
+        font-size:35px;
+        color:black;
+        margin-top:5rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .card-title{
+        font-size:20px;
+        color:rgb(82, 11, 11);
+        margin-top:5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+
+    .card-text{
+        font-size:17px;
+        color:black;
+    }
+    /* The Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:800px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#openModalBtn{
+    color:rgb(233, 229, 229);
+    background-color: rgb(150, 15, 15);
+    height:50px;
+    margin-top:5rem;
+    width:150px;
+    font-size:15px;
+}
+
+#openModalBtn:hover{
+    background-color: rgb(85, 5, 5);
+    color:white;
+}
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-checkbox {
+  margin: 10px 0;
+}
+
+.modal-select {
+  margin-bottom: 10px;
+}
+.submit-btn{
+    color:rgb(233, 229, 229);
+    background-color: rgb(150, 15, 15);
+    height:50px;
+    margin-top:5rem;
+    width:150px;
+    font-size:15px;
+
+}
+    
+
+    </style>
+  
+</head>
+<body>
+  
+
+  <div class="overlay"></div>
+  <div class="container" id="wantedpage">
+       <h1 class="wanted-title">Identify A Wanted</h1>
+       <p class="wanted-text">
+        At SafeNet, community safety is our top priority. That's why we're committed to helping identify and apprehend wanted criminals to ensure the security of our neighborhoods. 
+        <br><br>If you have any information about individuals involved in criminal activities or if you recognize someone from our wanted list, please report it anonymously through our platform.
+         Your vigilance and cooperation can make a significant difference in keeping our communities safe. Together, we can work towards a safer environment for everyone.
+         <br><br> Remember, your anonymity is protected, 
+        and your contribution is invaluable in the fight against crime. <br><br><br>Let's join forces to make our neighborhoods secure and peaceful.</p>
+     </div>
+   </div>
+ </div>
+</section>
+
+
+<button id="openModalBtn" class="modal-btn">Report a Criminal</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <form id="report-criminal-form">
+    <span class="close">&times;</span>
+    <h2>Report a Criminal</h2>
+    
+      <input type="text" id="criminalNameInput" class="modal-input" placeholder="Name of the Criminal..." required>
+      <input type="text" id="descriptionInput" class="modal-input" placeholder="Description..." required>
+      <input type="date" id="lastSeenInput" class="modal-input" required>
+
+      <h3>Your Information</h3>
+      <input type="text" id="fullNameInput" class="modal-input" placeholder="Your Full Name..." required>
+      <input type="text" id="usernameInput" class="modal-input" placeholder="Your Username..." required>
+
+    
+
+      <div class="modal-select">
+        <label for="threatLevelInput">Select threat level:</label>
+        <select id="threatLevelInput" class="modal-input" required>
+          <option value="">Select threat level...</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-flex">
+
+            
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>John Smith</b> - <i>Mastermind of Burglary and Assault</i> </h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 5, 2024</a></div>
+                            <div><a href="#">Location: Downtown Shopping Center</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>John Smith, an elusive criminal, meticulously plans daring heists targeting high-end residences. 
+                            Known for disabling security systems and leaving no fingerprints, he's also involved in violent assaults to ensure successful getaways.</p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Michael Brown</b> - <i>Infamous for Robbery and Vandalism</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted1.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 5, 2024</a></div>
+                            <div><a href="#">Location: Downtown Shopping Center</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Michael Brown, a bold and brazen figure, specializes in daylight robberies, often using unconventional methods. 
+                            His vandalism spree includes defacing public property, leaving behind distinctive graffiti signatures as a chilling calling card.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Emily Johnson</b> - <i>Orchestrator of Identity Theft and Fraud</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted2.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 28, 2024</a></div>
+                            <div><a href="#">Location: Restaurant 'Michelle' </a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Operating under various aliases, Emily Johnson is a skilled identity thief, infiltrating financial institutions to exploit sensitive data. 
+                            Her fraudulent activities range from draining bank accounts to creating sophisticated online scams.</p>
+                    </div>
+                </div>
+            </div>
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Ethan Martinez</b> - <i>Notorious Hacker and Fraudster</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted3.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 20, 2024</a></div>
+                            <div><a href="#">Location: School Campus</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Ethan Martinez, a tech prodigy turned criminal mastermind, employs advanced hacking techniques to breach secure networks. 
+                            He's known for orchestrating large-scale fraud operations, manipulating financial markets for personal gain.</p>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>William Wilson</b> - <i>Arsonist and Aggressive Assailant</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted4.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 5, 2024</a></div>
+                            <div><a href="#">Location: Shopping Mall</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>William Wilson, a volatile and dangerous individual, is wanted for a series of arson attacks. Known for his aggressive nature,
+                             he not only sets fires to structures but has a history of physically assaulting individuals who attempt to intervene or thwart his destructive plans.</p>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Emma Taylor</b> - <i>Smuggler and Master Forger</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted5.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 10, 2024</a></div>
+                            <div><a href="#">Location: Oakwood Park</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Emma Taylor's smuggling empire includes trafficking rare artifacts and evading customs.
+                             A master forger, she produces flawless counterfeit documents, enabling her to operate internationally with a web of false identities.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Liam Thomas</b> - <i>Cybercriminal and Extortionist</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted6.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 10, 2024</a></div>
+                            <div><a href="#">Location: Oakwood Park</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Liam Thomas, a skilled coder, targets corporations with ransomware attacks, demanding hefty payments. 
+                            As an extortionist, he leverages his knowledge of confidential information to coerce individuals and organizations into meeting his demands.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Isabella Garcia</b> - <i>Master of Embezzlement and Identity Theft</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted7.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 10, 2024</a></div>
+                            <div><a href="#">Location: Oakwood Park</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Isabella Garcia, a financial genius, embezzles funds from unsuspecting businesses.
+                             Her identity theft schemes involve creating elaborate personas, leaving victims unaware until substantial financial losses occur.</p>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Benjamin Harris</b> - <i>Notorious for Art Theft and Blackmail</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted8.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 10, 2024</a></div>
+                            <div><a href="#">Location: Oakwood Park</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Benjamin Harris, a connoisseur of fine art, orchestrates daring heists to steal masterpieces. 
+                            He employs blackmail tactics, threatening to destroy or sell the stolen art unless hefty ransoms are paid.</p>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Samuel Turner</b> - <i>Serial Burglar with a History of Assault</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted9.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: May 2, 2024</a></div>
+                            <div><a href="#">Location: Lakeside Mall</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Samuel Turner, a repeat offender, targets affluent neighborhoods. His history of assault includes violent encounters during break-ins, creating a heightened sense of fear among residents.</p>
+                    </div>
+                </div>
+            </div>
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Nathan Mitchell</b> - <i>Escaped Convict Wanted for Grand Larceny</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted10.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 10, 2024</a></div>
+                            <div><a href="#">Location: Oakwood Park</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Nathan Mitchell, an escapee with a knack for grand larceny, is known for meticulously planning heists on high-profile events. His criminal history involves stealing valuable artifacts, precious metals, and large sums of money.</p>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Daniel Reed</b> - <i>Suspected Drug Kingpin and Kidnapper</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted12.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: April 10, 2024</a></div>
+                            <div><a href="#">Location: Oakwood Park</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Daniel Reed, a shadowy figure in the drug trade, is suspected of running an expansive operation. His criminal empire extends to kidnapping individuals associated with rival gangs or law enforcement.</p>
+                    </div>
+                </div>
+            </div>
+
+
+    
+			
+
+        </div>
+    </div>
+    <h2 class="more-wanted">See More</h2>
+    <div id="wanted-container">
+
+    </div>
+</section>
+
+
+
+    <script src="/assets/js/fetchscript.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.easing.1.3.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/jquery.stellar.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.animateNumber.min.js"></script>
+	<script src="assets/js/scrollax.min.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.spapp.js"></script>
+	<script src="assets/js/jquery.spapp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/utils/utils.js"></script>
+    <script src="/utils/form_validation.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/block-ui.js"></script>
+    <script src="/assets/js/toastr.min.js"></script>
+    <script src="/assets/js/additional-methods.min.js"></script>
+
+
+   <script>
+        $(document).ready(() => {
+    getWanted();
+});
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("openModalBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+FormValidation.validate("#report-criminal-form", {}, function(data) {
+    Utils.block_ui("#myModal");
+    $('#myModal button[type="cancel"]').trigger("click");
+
+    $.post(Constants.API_BASE_URL + "add_user.php", data).done(function(data){
+        Utils.unblock_ui("#myModal");
+        $("#myModal").modal("toggle");
+        toastr.success("Successfully added a wanted criminal!");
+
+        Utils.get_datatable(
+            "users",
+            Constants.API_BASE_URL + "add_user.php",
+            [
+                {data : "userID"},
+                {data : "name"},
+                {data : "surname"},
+                {data : "email"},
+                {data : "age"},
+                {data : "password"},
+                        ]
+        );
+    })
+
+
+    .fail(function (xhr){
+        toastr.error(error);
+    })
+});
+
+
+      
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<?php
+// Include the database configuration file
+require_once 'config.php';
+
+// Retrieve the logged-in user's username from the session
+$username = $_SESSION['username'];
+
+// Retrieve user information from the database based on the username
+// Example SQL query (replace with actual query to fetch user data)
+$stmt = $pdo->prepare("SELECT * FROM users WHERE Username = :username");
+$stmt->bindParam(':username', $username);
+$stmt->execute();
+$userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SafeNet Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<link rel="stylesheet" href="/assets/css/spapp.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+
+
+  <style>
+    .dashboard-option {
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .dashboard-content {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .hello-user{
+        color:#fff;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-transform: capitalize;
+       
+    }
+
+    .block-20 {
+      border: 2px solid #333; 
+      border-radius: 8px; 
+      overflow: hidden; 
+    }
+
+    
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+  
+</head>
+<body>
+  
+ 
+
+    <div class="overlay"></div>
+    <div class="container" >
+          
+          <h2 class="hello-user">Welcome  <span id="userName"><?php echo $userData['Name']; ?></span><</h2>
+          <p class="report-text">SafeNet is a pioneering platform dedicated to providing a secure and confidential space for individuals to report various incidents anonymously. 
+            <br><br>Nestled at the intersection of privacy and security, SafeNet encourages users to contribute to the well-being of their communities without compromising their identity. 
+            <br><br>With intuitive features such as visual privacy design, comprehensive incident categories, and real-time notifications, SafeNet ensures that the reporting process is
+             not only seamless but also empowering. Our platform empowers users to play a crucial role in fostering a secure and collaborative environment, where every voice, regardless
+              of its anonymity, is valued and respected. <br><br>Join us in building a safer tomorrow with SafeNet, where reporting meets privacy.</p>
+        </div>
+      </div>
+    </div>
+
+ 
+<section class="ftco-section" id="dashboardpage">
+  <div class="container">
+    <div class="row d-flex">
+      <div class="col-md-3 d-flex ftco-animate">
+       <div class="blog-entry justify-content-end">
+        <div class="text">
+         <h3 class="heading mb-3"><a href="#userprofile">User Profile Information</a></h3>
+         <a href="#userprofile" class="block-20 img" style="background-image: url('imgs/user-profile-logo.jpg');">
+         </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 d-flex ftco-animate">
+   <div class="blog-entry justify-content-end">
+    <div class="text">
+     <h3 class="heading mb-3"><a href="#historypage">Report History</a></h3>
+     <a href="#historypage" class="block-20 img" style="background-image: url('imgs/report-history.jpg');">
+     </a>
+  </div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="#reportpage">Submit a new report</a></h3>
+   <a href="#reportpage" class="block-20 img" style="background-image: url('imgs/submit-newrep-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="#notifications">Notifications</a></h3>
+   <a href="#notifications" class="block-20 img" style="background-image: url('imgs/notifications-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="#settingspage">User Settings</a></h3>
+   <a href="#settingspage" class="block-20 img" style="background-image: url('imgs/settings-icon.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="#feedbackpage">User Feedback</a></h3>
+   <a href="#feedbackpage" class="block-20 img" style="background-image: url('imgs/feedback-icon.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="#emergencypage">Emergency Resources</a></h3>
+   <a href="#emergencypage" class="block-20 img" style="background-image: url('imgs/emergency-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 d-flex ftco-animate">
+ <div class="blog-entry justify-content-end">
+  <div class="text">
+   <h3 class="heading mb-3"><a href="#eventspage">Events and Meetups </a></h3>
+   <a href="#eventspage" class="block-20 img" style="background-image: url('imgs/chat-logo.jpg');">
+   </a>
+</div>
+</div>
+</div>
+
+    </div>
+    
+  </div>
+  
+<div class="degree-left-footer"></div>
+</section>	
+
+
+  
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.animateNumber.min.js"></script>
+    <script src="assets/js/scrollax.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.spapp.js"></script>
+    <script src="assets/js/jquery.spapp.min.js"></script>
+
+</body>
+</html>

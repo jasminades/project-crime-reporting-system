@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SafeNet Reporting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/animate.css">
+  <link rel="stylesheet" href="/assets/css/spapp.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+
+    
+  .modal {
+  display: none;
+  position: fixed;
+  margin-top:2rem;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:800px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#openModalBtn {
+  color: rgb(233, 229, 229);
+  background-color: rgb(150, 15, 15);
+  height: 50px; 
+  width: 150px;
+  font-size: 15px;
+  margin-top:10rem;
+  margin-bottom:7rem;
+}
+
+#openModalBtn:hover{
+    background-color: rgb(85, 5, 5);
+    color:white;
+}
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-checkbox {
+  margin: 10px 0;
+}
+
+.modal-select {
+  margin-bottom: 10px;
+}
+.submit-btn{
+    color:rgb(233, 229, 229);
+    background-color: rgb(150, 15, 15);
+    height:50px;
+    margin-top:5rem;
+    width:150px;
+    font-size:15px;
+
+
+}
+.table {
+    margin-top:-25rem;
+      width: 110%;
+
+      border-collapse: collapse;
+    }
+
+    .table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .table th {
+      background-color: #999999;
+      color: #ffffff;
+      font-size:25px;
+      border-color: #454d55;
+    }
+
+    .table td {
+      border-color: #454d55;
+    }
+
+    .table tbody tr:hover {
+      background-color: #d3d3d3;
+    }
+
+    @media (max-width: 767.98px) {
+      .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="reportpage">
+    <div class="row no-gutters slider-text align-items-end">
+      <div class="col-md-9 ftco-animate pb-5 mb-5">
+        <h1 class="report-title">Reporting</h1>
+        <p class="report-text">REPORTING <br><br>Please ensure precise and detailed entries when reporting crime. <br>
+          Remember, the smallest details can make a significant contribution to the investigation. 
+          <br><br>If possible, take clear pictures or videos of any evidence you come across, but be cautious and do not touch or 
+          remove anything from the location. Your cooperation is vital for a thorough investigation.<br><br> Your proactive involvement can make a difference in resolving these cases.
+          
+          <br><br>Thank you for your assistance.</p>
+      </div>
+    </div>
+
+
+
+  <div class="card mb-4">
+    <div class="card-header">
+      <i class="fas fa-table me-1"></i>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table
+          class="table table-striped table-bordered table-hover table-responsive"
+          id="tbl_patients"
+        >
+          <thead>
+            <tr>
+              <th data-name="id">Report ID</th>
+              <th data-name="full_name">Full name</th>
+              <th data-name="Contact Number">Contact number</th>
+              <th data-name="Description">Description</th>
+              <th data-name="Date">Date</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <button id="openModalBtn" class="modal-btn">Report Now</button>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <form action="/backend/submit_report.php" method="post" id="report-criminal-form">
+        <span class="close">&times;</span>
+        <h2>Report Now</h2>
+        <h3>Your Information</h3>
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" class="modal-input" placeholder="Full Name..." required>
+        </div>
+        <div class="form-group">
+          <label for="number">Contact Number:</label>
+          <input type="text" id="number" name="number" class="modal-input" placeholder="Contact Number..." required>
+        </div>
+        <h3>Report Information</h3>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" class="modal-input" placeholder="Description..." required>
+        </div>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" class="modal-input" required>
+        </div>
+      
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("openModalBtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      $('#report-criminal-form').submit(function(event) {
+        event.preventDefault(); 
+        var formData = $(this).serialize(); 
+        $.ajax({
+          type: 'POST',
+          url: '/backend/submit_report.php',
+          data: formData,
+          success: function(response) {
+            alert('Form submitted successfully!'); 
+            console.log(response);
+          },
+          error: function(xhr, status, error) {
+            console.error(xhr.responseText);
+            alert('An error occurred while submitting the form. Please try again later.'); 
+          }
+        });
+      });
+    });
+
+
+
+  </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/jquery.easing.1.3.js"></script>
+   <script src="assets/js/jquery.waypoints.min.js"></script>
+   <script src="assets/js/jquery.stellar.min.js"></script>
+   <script src="assets/js/owl.carousel.min.js"></script>
+   <script src="assets/js/jquery.animateNumber.min.js"></script>
+   <script src="assets/js/scrollax.min.js"></script>
+   <script src="assets/js/main.js"></script>
+   <script src="assets/js/jquery.spapp.js"></script>
+   <script src="assets/js/jquery.spapp.min.js"></script>
+</body>
+</html>
