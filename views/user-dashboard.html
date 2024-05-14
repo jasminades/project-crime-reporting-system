@@ -1,3 +1,19 @@
+<?php
+// Include the database configuration file
+require_once 'config.php';
+
+// Retrieve the logged-in user's username from the session
+$username = $_SESSION['username'];
+
+// Retrieve user information from the database based on the username
+// Example SQL query (replace with actual query to fetch user data)
+$stmt = $pdo->prepare("SELECT * FROM users WHERE Username = :username");
+$stmt->bindParam(':username', $username);
+$stmt->execute();
+$userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
