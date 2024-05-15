@@ -7,7 +7,6 @@ Flight::set('missing_service', new MissingService());
 Flight::route('POST /missing/add', function() {
     $payload = Flight::request()->data->getData();
 
-    // Check if required fields are present
     if (!isset($payload['name']) || !isset($payload['age'])) {
         Flight::halt(400, "Name and age are required for a missing person report.");
     }
@@ -15,7 +14,6 @@ Flight::route('POST /missing/add', function() {
     $missing = [
         'name' => $payload['name'],
         'age' => $payload['age'],
-        // Add other fields as needed
     ];
 
     $missing = Flight::get('missing_service')->add_missing_person($missing);

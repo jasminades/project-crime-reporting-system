@@ -7,7 +7,6 @@ Flight::set('attachment_service', new AttachmentService());
 Flight::route('POST /attachments/add', function() {
     $payload = Flight::request()->data->getData();
 
-    // Check if required fields are present
     if (!isset($payload['filename']) || !isset($payload['file_path'])) {
         Flight::halt(400, "Filename and file path are required.");
     }

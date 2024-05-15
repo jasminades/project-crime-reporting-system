@@ -7,7 +7,6 @@ Flight::set('wanted_service', new WantedService());
 Flight::route('POST /wanted/add', function() {
     $payload = Flight::request()->data->getData();
 
-    // Check if required fields are present
     if (!isset($payload['name']) || !isset($payload['crime'])) {
         Flight::halt(400, "Name and crime are required for a wanted person report.");
     }
@@ -15,7 +14,6 @@ Flight::route('POST /wanted/add', function() {
     $wanted = [
         'name' => $payload['name'],
         'crime' => $payload['crime'],
-        // Add other fields as needed
     ];
 
     $wanted = Flight::get('wanted_service')->add_wanted($wanted);

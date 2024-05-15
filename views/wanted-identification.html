@@ -60,7 +60,6 @@
   text-align: center;
 }
 
-/* Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -74,7 +73,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 
 #openModalBtn{
     color:rgb(233, 229, 229);
@@ -388,99 +386,85 @@
                 </div>
             </div>
 
+   <div class="container">
+        <div class="row d-flex">
+           <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Michael Brown</b> - <i>Infamous for Robbery and Vandalism</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted1.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 5, 2024</a></div>
+                            <div><a href="#">Location: Downtown Shopping Center</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Michael Brown, a bold and brazen figure, specializes in daylight robberies, often using unconventional methods. 
+                            His vandalism spree includes defacing public property, leaving behind distinctive graffiti signatures as a chilling calling card.</p>
+                    </div>
+                </div>
+            </div>
 
-    
-			
-
+		<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Michael Brown</b> - <i>Infamous for Robbery and Vandalism</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted1.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 5, 2024</a></div>
+                            <div><a href="#">Location: Downtown Shopping Center</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Michael Brown, a bold and brazen figure, specializes in daylight robberies, often using unconventional methods. 
+                            His vandalism spree includes defacing public property, leaving behind distinctive graffiti signatures as a chilling calling card.</p>
+                    </div>
+                </div>
+            </div>
+		<div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                    <div class="text">
+                        <h3 class="heading mb-3"><a href="#wantedreportpage"><b>Michael Brown</b> - <i>Infamous for Robbery and Vandalism</i></a></h3>
+                        <a href="#wantedreportpage" class="block-20 img"
+                            style="background-image: url('imgs/wanted1.jpg');"></a>
+                        <div class="meta mb-3">
+                            <div><a href="#">Last Seen: March 5, 2024</a></div>
+                            <div><a href="#">Location: Downtown Shopping Center</a></div>
+                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
+                        </div>
+                        <p>Michael Brown, a bold and brazen figure, specializes in daylight robberies, often using unconventional methods. 
+                            His vandalism spree includes defacing public property, leaving behind distinctive graffiti signatures as a chilling calling card.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <h2 class="more-wanted">See More</h2>
-    <div id="wanted-container">
-
     </div>
 </section>
 
 
 
-    <script src="/assets/js/fetchscript.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.easing.1.3.js"></script>
-	<script src="assets/js/jquery.waypoints.min.js"></script>
-	<script src="assets/js/jquery.stellar.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/jquery.animateNumber.min.js"></script>
-	<script src="assets/js/scrollax.min.js"></script>
-	<script src="/assets/js/main.js"></script>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.spapp.js"></script>
-	<script src="assets/js/jquery.spapp.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/utils/utils.js"></script>
-    <script src="/utils/form_validation.js"></script>
-    <script src="/assets/js/jquery.validate.min.js"></script>
-    <script src="/assets/js/block-ui.js"></script>
-    <script src="/assets/js/toastr.min.js"></script>
-    <script src="/assets/js/additional-methods.min.js"></script>
 
+    <script>
+        var modal = document.getElementById("myModal");
 
-   <script>
-        $(document).ready(() => {
-    getWanted();
-});
+        var btn = document.getElementById("openModalBtn");
 
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("openModalBtn");
-var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
-FormValidation.validate("#report-criminal-form", {}, function(data) {
-    Utils.block_ui("#myModal");
-    $('#myModal button[type="cancel"]').trigger("click");
-
-    $.post(Constants.API_BASE_URL + "add_user.php", data).done(function(data){
-        Utils.unblock_ui("#myModal");
-        $("#myModal").modal("toggle");
-        toastr.success("Successfully added a wanted criminal!");
-
-        Utils.get_datatable(
-            "users",
-            Constants.API_BASE_URL + "add_user.php",
-            [
-                {data : "userID"},
-                {data : "name"},
-                {data : "surname"},
-                {data : "email"},
-                {data : "age"},
-                {data : "password"},
-                        ]
-        );
-    })
-
-
-    .fail(function (xhr){
-        toastr.error(error);
-    })
-});
-
-
-      
-
-   </script>
 </body>
 </html>

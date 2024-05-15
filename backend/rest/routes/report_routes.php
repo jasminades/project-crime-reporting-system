@@ -1,13 +1,12 @@
 <?php
 
-require_once __DIR__ . '/../services/ReportService.class.php';
+require_once __DIR__ . '/../services/reportService.class.php';
 
 Flight::set('report_service', new ReportService());
 
 Flight::route('POST /reports/add', function() {
     $payload = Flight::request()->data->getData();
 
-    // Check if required fields are present
     if (!isset($payload['description']) || !isset($payload['date'])) {
         Flight::halt(400, "Description and date are required.");
     }

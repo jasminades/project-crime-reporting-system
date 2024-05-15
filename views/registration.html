@@ -121,7 +121,6 @@
 
   <script>
     function submitRegistration() {
-        // Get user data from the registration form
         var firstName = document.getElementById("firstName").value;
         var lastName = document.getElementById("lastName").value;
         var age = document.getElementById("age").value;
@@ -130,20 +129,15 @@
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
   
-        // Perform basic form validation
         if (!firstName || !lastName || !age || !nationality || !phoneNumber || !email || !password) {
             alert("Please fill in all fields");
             return;
         }
   
-        // Simulate sending user data to the server
-        // Replace this with actual AJAX or fetch requests to your server
         simulateServerRegistration(firstName, lastName, age, nationality, phoneNumber, email, password);
     }
   
     function simulateServerRegistration(firstName, lastName, age, nationality, phoneNumber, email, password) {
-        // Simulate storing user data on the server (in a database, for example)
-        // In a real scenario, this would be done through server-side code
         var user = {
             firstName: firstName,
             lastName: lastName,
@@ -151,13 +145,9 @@
             nationality: nationality,
             phoneNumber: phoneNumber,
             email: email,
-            // You may hash the password and perform other necessary server-side tasks
         };
-  
-        // Simulate storing the user object in a session or a database
         sessionStorage.setItem('currentUser', JSON.stringify(user));
   
-        // Redirect to the user dashboard or profile page
         window.location.href = "user-dashboard.html";
     }
     </script>
