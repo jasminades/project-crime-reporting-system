@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * openapi: 3.0.0
  * @OA\Info(
  *   title="API",
  *   description="Crime Reporting System API",
@@ -15,6 +16,7 @@
  *       url=BASE_URL
  *   )
  * )
+ * 
  * @OA\SecurityScheme(
  *     securityScheme="ApiKey",
  *     type="apiKey",
