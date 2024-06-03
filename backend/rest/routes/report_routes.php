@@ -1,13 +1,16 @@
 <?php
 
 require_once __DIR__ . '/../services/reportService.class.php';
+require_once __DIR__ . '/../dao/reportDao.class.php';
 
-Flight::set('report_service', new ReportService());
+
+Flight::set('reportService', new ReportService());
 
 /**
  * @OA\Post(
  *     path="/reports/add",
  *     summary="Add a new report",
+ *     tags={"reports"},
  *     description="Adds a new report to the system.",
  *     operationId="addReport",
  *     @OA\RequestBody(
@@ -44,7 +47,7 @@ Flight::route('POST /reports/add', function() {
         'date' => $payload['date'],
     ];
 
-    $report = Flight::get('report_service')->add_report($report);
+    $report = Flight::get('reportService')->add_report($report);
 
     Flight::json(['message' => "Report added successfully", 'data' => $report]);
 });
@@ -53,6 +56,7 @@ Flight::route('POST /reports/add', function() {
  * @OA\Get(
  *     path="/reports/{report_id}",
  *     summary="Get report by ID",
+ *     tags={"reports"},
  *     description="Gets a report by its ID.",
  *     operationId="getReportById",
  *     @OA\Parameter(
@@ -77,7 +81,7 @@ Flight::route('POST /reports/add', function() {
  * )
  */
 Flight::route('GET /reports/@report_id', function($report_id) {
-    $report = Flight::get('report_service')->get_report_by_id($report_id);
+    $report = Flight::get('reportService')->get_report_by_id($report_id);
 
     if (!$report) {
         Flight::halt(404, "Report not found");
@@ -90,6 +94,7 @@ Flight::route('GET /reports/@report_id', function($report_id) {
  * @OA\Get(
  *     path="/reports",
  *     summary="Get all reports",
+ *     tags={"reports"},
  *     description="Gets all reports stored in the system.",
  *     operationId="getAllReports",
  *     @OA\Response(
@@ -100,15 +105,15 @@ Flight::route('GET /reports/@report_id', function($report_id) {
  * )
  */
 Flight::route('GET /reports', function() {
-    $reports = Flight::get('report_service')->get_all_reports();
-
+    $reports = Flight::get('reportService')->get_all_reports();
     Flight::json($reports);
-});
+});;
 
 /**
  * @OA\Put(
  *     path="/reports/update/{report_id}",
  *     summary="Update a report",
+ *     tags={"reports"},
  *     description="Updates an existing report.",
  *     operationId="updateReport",
  *     @OA\Parameter(
@@ -139,7 +144,7 @@ Flight::route('GET /reports', function() {
 Flight::route('PUT /reports/update/@report_id', function($report_id) {
     $payload = Flight::request()->data->getData();
 
-    $updated_report = Flight::get('report_service')->update_report($report_id, $payload);
+    $updated_report = Flight::get('reportService')->update_report($report_id, $payload);
 
     Flight::json(['message' => "Report updated successfully", 'data' => $updated_report]);
 });
@@ -148,6 +153,7 @@ Flight::route('PUT /reports/update/@report_id', function($report_id) {
  * @OA\Delete(
  *     path="/reports/delete/{report_id}",
  *     summary="Delete a report",
+ *     tags={"reports"},
  *     description="Deletes a report from the system.",
  *     operationId="deleteReport",
  *     @OA\Parameter(
@@ -170,9 +176,25 @@ Flight::route('PUT /reports/update/@report_id', function($report_id) {
  * )
  */
 Flight::route('DELETE /reports/delete/@report_id', function($report_id) {
-    Flight::get('report_service')->delete_report($report_id);
-
+    Flight::get('reportService')->delete_report($report_id);
     Flight::json(['message' => "Report deleted successfully"]);
 });
+
+/**
+ * @OA\Get(
+ *     path="/reports/info",
+ *     tags={"reports"},
+ *     summary="Get logged in report information",
+ *     @OA\Response(
+ *         response=200,
+ *         @OA\JsonContent(type="array", @OA\Items(ref="assets/json/reports.json"))
+ *         )
+ *     )
+ * )
+ */
+Flight::route('GET /info', function() {
+    Flight::json(Flight::get('report'), 200);
+});
+
 
 ?>

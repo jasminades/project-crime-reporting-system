@@ -8,6 +8,7 @@ Flight::set('user_service', new UserService());
  * @OA\Post(
  *     path="/users/add",
  *     summary="Add a new user",
+ * tags = {"users"},    
  *     description="Adds a new user to the system.",
  *     operationId="addUser",
  *     @OA\RequestBody(
@@ -54,6 +55,7 @@ Flight::route('POST /users/add', function() {
  * @OA\Get(
  *     path="/users/{user_id}",
  *     summary="Get user by ID",
+ * tags = {"users"},
  *     description="Gets a user by their ID.",
  *     operationId="getUserById",
  *     @OA\Parameter(
@@ -109,6 +111,7 @@ Flight::route('GET /users', function() {
  * @OA\Put(
  *     path="/users/update/{user_id}",
  *     summary="Update a user",
+ * tags = {"users"},
  *     description="Updates an existing user.",
  *     operationId="updateUser",
  *     @OA\Parameter(
@@ -147,6 +150,7 @@ Flight::route('PUT /users/update/@user_id', function($user_id) {
  * @OA\Delete(
  *     path="/users/delete/{user_id}",
  *     summary="Delete a user",
+ *     tags = {"users"},
  *     description="Deletes a user from the system.",
  *     operationId="deleteUser",
  *     @OA\Parameter(
@@ -171,6 +175,24 @@ Flight::route('DELETE /users/delete/@user_id', function($user_id) {
     Flight::get('user_service')->delete_user($user_id);
 
     Flight::json(['message' => "User deleted successfully"]);
+});
+
+
+/**
+ * @OA\Get(
+ *     path="/users/info",
+ *      tags={"users"},
+ *      summary = "Get logged in users information",
+ *     @OA\Response(
+ *         response=200,
+ *         @OA\JsonContent(
+ *             @OA\Property(property="message", type="string", example="")
+ *         )
+ *     )
+ * )
+ */
+Flight::route('GET /info', function() {
+    Flight::json(Flight::get('user'),200);
 });
 
 ?>

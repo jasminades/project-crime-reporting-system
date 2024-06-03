@@ -6,7 +6,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_DEPRECATED));
 
 
 define('DB_NAME', 'crime-reporting-system');
-define('DB_PORT', 3000);
+define('DB_PORT', 3306);
 define('DB_USER', 'root');
 define('DB_PASSWORD', '123456');
 define('DB_HOST', '127.0.0.1');

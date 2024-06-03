@@ -8,6 +8,7 @@ Flight::set('attachment_service', new AttachmentService());
  * @OA\Post(
  *     path="/attachments/add",
  *     summary="Add a new attachment",
+ *  * tags = {"attachments"},
  *     description="Adds a new attachment to the system.",
  *     operationId="addAttachment",
  *     @OA\RequestBody(
@@ -53,6 +54,7 @@ Flight::route('POST /attachments/add', function() {
  * @OA\Get(
  *     path="/attachments/{attachment_id}",
  *     summary="Get attachment by ID",
+ *  * tags = {"attachments"},
  *     description="Gets an attachment by its ID.",
  *     operationId="getAttachmentById",
  *     @OA\Parameter(
@@ -108,6 +110,7 @@ Flight::route('GET /attachments', function() {
  * @OA\Put(
  *     path="/attachments/update/{attachment_id}",
  *     summary="Update an attachment",
+ *  * tags = {"attachments"},
  *     description="Updates an existing attachment.",
  *     operationId="updateAttachment",
  *     @OA\Parameter(
@@ -146,6 +149,7 @@ Flight::route('PUT /attachments/update/@attachment_id', function($attachment_id)
  * @OA\Delete(
  *     path="/attachments/delete/{attachment_id}",
  *     summary="Delete an attachment",
+ * tags = {"attachments"},
  *     description="Deletes an attachment from the system.",
  *     operationId="deleteAttachment",
  *     @OA\Parameter(
@@ -170,6 +174,25 @@ Flight::route('DELETE /attachments/delete/@attachment_id', function($attachment_
     Flight::get('attachment_service')->delete_attachment($attachment_id);
 
     Flight::json(['message' => "Attachment deleted successfully"]);
+});
+
+
+
+/**
+ * @OA\Get(
+ *     path="/attachments/info",
+ *      tags={"attachments"},
+ *      summary = "Get logged in attachment information",
+ *     @OA\Response(
+ *         response=200,
+ *         @OA\JsonContent(
+ *             @OA\Property(property="message", type="string", example="")
+ *         )
+ *     )
+ * )
+ */
+Flight::route('GET /info', function() {
+    Flight::json(Flight::get('attachment'),200);
 });
 
 ?>

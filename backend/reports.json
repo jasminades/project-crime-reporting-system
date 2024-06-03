@@ -1,0 +1,83 @@
+[
+    {
+      "Report ID": "R001",
+      "Reporter Full Name": "John Doe",
+      "Contact Number": "123-456-7890",
+      "Reporter Email": "john@example.com",
+      "Description": "Missing person report - Jane Doe, age 30, last seen near downtown.",
+      "Date": "2024-05-01"
+    },
+    {
+      "Report ID": "R002",
+      "Reporter Full Name": "Alice Smith",
+      "Contact Number": "987-654-3210",
+      "Reporter Email": "alice@example.com",
+      "Description": "Cybercrime report - Unauthorized access to bank account.",
+      "Date": "2024-05-02"
+    },
+    {
+      "Report ID": "R003",
+      "Reporter Full Name": "Bob Johnson",
+      "Contact Number": "555-555-5555",
+      "Reporter Email": "bob@example.com",
+      "Description": "Assault report - Victim assaulted in the park.",
+      "Date": "2024-05-03"
+    },
+    {
+      "Report ID": "R004",
+      "Reporter Full Name": "Emily Brown",
+      "Contact Number": "777-777-7777",
+      "Reporter Email": "emily@example.com",
+      "Description": "Burglary report - House broken into, valuables stolen.",
+      "Date": "2024-05-04"
+    },
+    {
+      "Report ID": "R005",
+      "Reporter Full Name": "Michael Wilson",
+      "Contact Number": "111-222-3333",
+      "Reporter Email": "michael@example.com",
+      "Description": "Fraud report - Scammed through online purchase.",
+      "Date": "2024-05-05"
+    },
+    {
+      "Report ID": "R006",
+      "Reporter Full Name": "Sarah Adams",
+      "Contact Number": "123-596-1589",
+      "Reporter Email": "sarah@example.com",
+      "Description": "Drug-related crime report - Suspicious activity reported in alleyway.",
+      "Date": "2024-05-06"
+    },
+    {
+      "Report ID": "R007",
+      "Reporter Full Name": "David Lee",
+      "Contact Number": "357-159-4568",
+      "Reporter Email": "david@example.com",
+      "Description": "Vandalism report - Graffiti found on public property.",
+      "Date": "2024-05-07"
+    },
+    {
+      "Report ID": "R008",
+      "Reporter Full Name": "Emma Taylor",
+      "Contact Number": "888-888-8888",
+      "Reporter Email": "emma@example.com",
+      "Description": "Robbery report - Convenience store held up at gunpoint.",
+      "Date": "2024-05-08"
+    },
+    {
+      "Report ID": "R009",
+      "Reporter Full Name": "James Clark",
+      "Contact Number": "135-785-1234",
+      "Reporter Email": "james@example.com",
+      "Description": "Domestic violence report - Disturbance reported by neighbors.",
+      "Date": "2024-05-09"
+    },
+    {
+      "Report ID": "R010",
+      "Reporter Full Name": "Olivia Martinez",
+      "Contact Number": "000-000-0000",
+      "Reporter Email": "olivia@example.com",
+      "Description": "Traffic accident report - Collision at intersection, injuries reported.",
+      "Date": "2024-05-10"
+    }
+  ]
+  

@@ -19,10 +19,10 @@ Flight::group('/auth', function() {
      *           description="Report data and JWT"
      *      ),
      *      @OA\RequestBody(
-     *          description="Creditentials",
+     *          description="Credentials",
      *          @OA\JsonContent(
      *              required={"email","password"},
-     *              @OA\Property(property="email", type="number", example="name@example.com", description="Email),
+     *              @OA\Property(property="email", type="string", example="name@example.com", description="Email"),
      *              @OA\Property(property="password", type="string", example="some_password", description="Password")
      *          )
      *      )
