@@ -1,9 +1,15 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
+
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '5387ae35428244b72880e6739d3f0d9a900385cc',
+
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => '4214051084d4ad612fb87cfe438e988f2f9eb678',
+
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +17,15 @@
     ),
     'versions' => array(
         '__root__' => array(
+
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '5387ae35428244b72880e6739d3f0d9a900385cc',
+
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => '4214051084d4ad612fb87cfe438e988f2f9eb678',
+
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -89,9 +101,15 @@
             'dev_requirement' => false,
         ),
         'symfony/finder' => array(
+
+            'pretty_version' => 'v5.4.40',
+            'version' => '5.4.40.0',
+            'reference' => 'f51cff4687547641c7d8180d74932ab40b2205ce',
+
             'pretty_version' => 'v7.0.7',
             'version' => '7.0.7.0',
             'reference' => '4d58f0f4fe95a30d7b538d71197135483560b97c',
+
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/finder',
             'aliases' => array(),
@@ -107,9 +125,15 @@
             'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
+
+            'pretty_version' => 'v5.4.40',
+            'version' => '5.4.40.0',
+            'reference' => '81cad0ceab3d61fe14fe941ff18a230ac9c80f83',
+
             'pretty_version' => 'v7.0.7',
             'version' => '7.0.7.0',
             'reference' => '0d3916ae69ea28b59d94b60c4f2b50f4e25adb5c',
+
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),

@@ -1,0 +1,151 @@
+openapi: "3.0.0"
+info:
+  title: API
+  description: 'Crime Reporting System API'
+  contact:
+    name: 'Jasmina Destanovic'
+    email: 'jasmina.destanovic@stu.ibu.edu.ba'
+  version: '1.0'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+paths:
+  /reports:
+    get:
+      tags:
+        - reports
+      summary: 'Get all reports'
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 'Array of all reports in the databases'
+  '/reports/one/{reports_id}':
+    get:
+      tags:
+        - reports
+      summary: 'Get reports by id'
+      parameters:
+        - name: reports_id
+          in: path
+          description: 'ID of the reports'
+          required: true
+          schema:
+            type: integer
+            format: int64
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 'report data, or false if reports does not exist'
+  /reports/add:
+    post:
+      tags:
+        - reports
+      summary: 'Add report data to the database'
+      requestBody:
+        description: 'report data payload'
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                - contactNumber
+                - description
+                - date
+              properties:
+                id:
+                  description: 'Report ID'
+                  type: string
+                  example: '1'
+                name:
+                  description: 'Reporter name'
+                  type: string
+                  example: 'John Doe'
+                contactNumber:
+                  description: 'Contact number of the reporter'
+                  type: string
+                  example: '123-456-7890'
+                description:
+                  description: 'Description of report'
+                  type: string
+                  example: 'I am reporting...'
+                date:
+                  description: 'Date of report'
+                  type: string
+                  format: date
+                  example: '2023-06-20'
+              type: object
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 'Report data, or exception if report is not added properly'
+  '/reports/delete/{report_id}':
+    delete:
+      tags:
+        - reports
+      summary: 'Delete report by id'
+      parameters:
+        - name: report_id
+          in: path
+          description: 'ID of the report'
+          required: true
+          schema:
+            type: integer
+            format: int64
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 'Deleted report data or 500 status code exception otherwise'
+  /reports/edit:
+    post:
+      tags:
+        - reports
+      summary: 'Edit existing report data in the database'
+      requestBody:
+        description: 'Updated report data payload'
+        content:
+          application/json:
+            schema:
+              required:
+                - id
+                - name
+                - description
+                - date
+              properties:
+                id:
+                  description: 'Report ID'
+                  type: string
+                  example: '1'
+                name:
+                  description: 'Reporter name'
+                  type: string
+                  example: 'John Doe'
+                contactNumber:
+                  description: 'Contact number of the reporter'
+                  type: string
+                  example: '123-456-7890'
+                description:
+                  description: 'Description of report'
+                  type: string
+                  example: 'I am reporting...'
+                date:
+                  description: 'Date of report'
+                  type: string
+                  format: date
+                  example: '2023-06-20'
+              type: object
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 'Report data updated successfully'
+        '404':
+          description: 'Report not found'

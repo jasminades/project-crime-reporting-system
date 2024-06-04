@@ -13,17 +13,17 @@ Flight::group('/auth', function() {
      * @OA\Post(
      *      path="/auth/login",
      *      tags={"auth"},
-     *      summary="Login to system using report id and password",
+     *      summary="Login to system using email and password",
      *      @OA\Response(
      *           response=200,
-     *           description="report data and JWT"
+     *           description="Report data and JWT"
      *      ),
      *      @OA\RequestBody(
-     *          description="Report ID - Creditentials",
+     *          description="Credentials",
      *          @OA\JsonContent(
-     *              required={"report_id","password"},
-     *              @OA\Property(property="report_id", type="number", example="1", description="Report ID"),
-     *              @OA\Property(property="password", type="string", example="some_password", description="Patient password")
+     *              required={"email","password"},
+     *              @OA\Property(property="email", type="string", example="name@example.com", description="Email"),
+     *              @OA\Property(property="password", type="string", example="some_password", description="Password")
      *          )
      *      )
      * )
@@ -31,7 +31,7 @@ Flight::group('/auth', function() {
     Flight::route('POST /login', function() {
         $payload = Flight::request()->data->getData();
 
-        $report = Flight::get('auth_service')->get_report_by_id($payload['report_id']);
+        $report = Flight::get('auth_service')->get_report_by_id($payload['email']);
 
         if(!$report || !password_verify($payload['password'], $report['password']))
             Flight::halt(500, "Invalid username or password");
